@@ -106,6 +106,19 @@
     "order": 3,
     "requiredPrivilege": "app:clinical"
   },
+  "bahmniClinicalLinkageInPatients": {
+    "id": "bahmni.clinical.patients.search.activeTriagedPatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.LinkedPatients",
+      "translationKey": "Linkage In",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard"
+    },
+    "label": "Active",
+    "order": 2,
+    "requiredPrivilege": "app:clinical"
+  },
   "activePatientsByLocation": {
     "id": "bahmni.clinical.patients.search.activePatientsByLocation",
     "extensionPointId": "org.bahmni.patient.search",
