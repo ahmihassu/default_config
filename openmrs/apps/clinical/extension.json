@@ -107,7 +107,7 @@
     "requiredPrivilege": "app:clinical"
   },
   "bahmniClinicalLinkageInPatients": {
-    "id": "bahmni.clinical.patients.search.activeTriagedPatients",
+    "id": "bahmni.clinical.patients.search.linkedPatients",
     "extensionPointId": "org.bahmni.patient.search",
     "type": "config",
     "extensionParams": {
