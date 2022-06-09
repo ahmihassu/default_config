@@ -147,31 +147,6 @@
                 "label": "P<u>r</u>int ER Triage Form",
                 "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_ErTriage.html",
                 "shortcutKey": "r"
-            },
-            {
-                "label": "P<u>r</u>int ED Triage Form",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_ed_triage.html",
-                "shortcutKey": "s"
-            },
-            {
-                "label": "P<u>r</u>int Obstetrics Triage Form",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_obstetrics.html",
-                "shortcutKey": "t"
-            },
-            {
-                "label": "P<u>r</u>int Pediatrics Triage Form",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_pediatrics.html",
-                "shortcutKey": "p"
-            },
-            {
-                "label": "P<u>r</u>int CR Triage Form",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_CrTriage.html",
-                "shortcutKey": "r"
-            },
-            {
-                "label": "P<u>r</u>int Patient MRN",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_mrn_only.html",
-                "shortcutKey": "r"
             }
         ],
         "conceptSetUI": {
