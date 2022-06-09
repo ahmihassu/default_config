@@ -14,7 +14,7 @@
     "extensionPointId": "org.bahmni.home.dashboard",
     "type": "link",
     "translationKey": "MODULE_LABEL_PROGRAMS_KEY",
-    "url": "../clinical/#/programs/patient/search",
+    "url": "../clinical/#/programs/patient/searchProgram",
     "icon": "icon-bahmni-program",
     "order": 2,
     "requiredPrivilege": "app:clinical"

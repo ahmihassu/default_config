@@ -10,6 +10,17 @@
         "order": 1,
         "requiredPrivilege": "View Patients"
     },
+    "searchProgram":{
+            "id": "bahmni.bahmni.patient.searchProgram",
+            "extensionPointId": "org.bahmni.patient.searchProgram",
+            "type": "link",
+            "translationKey":"REGISTRATION_SEARCH_CONFIG_KEY",
+            "url": "/patient/searchProgram",
+            "shortcutKey": "REGISTRATION_SEARCH_CONFIG_ACCESS_KEY",
+            "icon": "fa-search",
+            "order": 1,
+            "requiredPrivilege": "app:clinical"
+    },
     "createNew":{
         "id": "bahmni.registration.navigation.patient.create",
         "extensionPointId": "org.bahmni.registration.navigation",
