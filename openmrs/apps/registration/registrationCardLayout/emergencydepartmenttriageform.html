@@ -1,4 +1,5 @@
 <!-- <div class="print-wrapper"> -->
+  <link rel="stylesheet" href="/bahmni_config/openmrs/apps/registration/registrationCardLayout/css/print.css"/> 
     <div class="print-wrapper">
         <div style=" text-align: center;color: black; margin-bottom: 10px;">
           <h1 style="font-size: 14pt;margin-bottom: 0;color: black;font-family: Arial, sans-serif;" >
@@ -8,8 +9,14 @@
         
         <h4 style="text-align: center;">Emergency Triage Form</h4>
          <link rel="stylesheet" href="../styles/registrationPrint.css" media="all"/>
-         <h4>Patient Name <span style="text-decoration: underline;"> {{patient.fullNameLocal()}}</span>
-         MRN <span style="text-decoration: underline;"> {{patient.primaryIdentifier.identifier}}</span></h4>
+         <p>Patient Name 
+            <span class="tick-text"> {{patient.fullNameLocal()}}</span>
+            MRN <span  class="tick-text"> {{patient.primaryIdentifier.identifier}}</span>
+       </p>
+       <p>Age 
+            <span class="tick-text"> {{patient.age | age}}</span>
+            Sex <span  class="tick-text"> {{patient.gender}} </span>
+       </p>
           <section class="block observation dashboard-section">
               
               <div style="width: 50%; height: 80vh; float: left; margin-right: 10%;">
