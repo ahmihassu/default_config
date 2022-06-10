@@ -8,7 +8,8 @@
         
         <h4 style="text-align: center;">ED Triage Form</h4>
          <link rel="stylesheet" href="../styles/registrationPrint.css" media="all"/>
-        <h4>Patient MRN <span style="text-decoration: underline;"> {{patient.primaryIdentifier.identifier}}</span></h4>
+         <h4>Patient Name <span style="text-decoration: underline;"> {{patient.fullNameLocal()}}</span>
+          MRN <span style="text-decoration: underline;"> {{patient.primaryIdentifier.identifier}}</span></h4>
           <section class="block observation dashboard-section">
               <div style="width: 50%; height: 80vh; float: left; margin-right: 10%;">
               <div bahmni-observation patient="patient" config="{conceptNames: ['ED Triage, Time of arrival to ED', 'ED Triage, Triage time', 'ER Mode of arrival to the Hospital/ED', 'ED Triage, Origin of referral', 'ED Triage, Pre hospital care/First Aid given',
