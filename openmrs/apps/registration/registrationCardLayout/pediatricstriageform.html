@@ -1,0 +1,22 @@
+<!-- <div class="print-wrapper"> -->
+    <div class="print-wrapper">
+        <div style=" text-align: center;color: black; margin-bottom: 10px;">
+          <h1 style="font-size: 14pt;margin-bottom: 0;color: black;font-family: Arial, sans-serif;" >
+            <span style="font-family:nyala">Tirunesh Bejining Hospital</span>
+        </h1>
+     </div>
+        
+        <h4 style="text-align: center;">Pediatrics Triage Form</h4>
+         <link rel="stylesheet" href="../styles/registrationPrint.css" media="all"/>
+        <h4>Patient MRN <span style="text-decoration: underline;"> {{patient.primaryIdentifier.identifier}}</span></h4>
+          <section class="block observation dashboard-section"> 
+              <div>
+              <div bahmni-observation patient="patient" config="{conceptNames: ['Pediatrics Triage Form'], scope: 'latest'}"
+                        ertraigeprint="true" displaystyle="'normal view'" ></div>
+              </div>
+              <div style="text-align: right;position:fixed;bottom: 40px;right: 40px;"><strong>{{currentUser.person.personName.givenName +" " + currentUser.person.personName.familyName+ " "}}   ___________</strong></div>                   
+               
+    
+          </section>
+        
+    </div>

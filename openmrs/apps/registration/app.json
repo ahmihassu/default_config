@@ -138,18 +138,8 @@
         "printOptions": [
             {
                 "translationKey": "REGISTRATION_PRINT_REG_CARD_LOCAL_KEY",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_main.html",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/",
                 "shortcutKey": "c"
-            },
-            {
-            "translationKey": "REGISTRATION_PRINT_REG_CARD_KEY",
-            "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_index.html",
-            "shortcutKey": "z"
-            },
-            {
-                "label": "P<u>r</u>int ER Triage Form",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_ErTriage.html",
-                "shortcutKey": "r"
             }
         ],
         "conceptSetUI": {
