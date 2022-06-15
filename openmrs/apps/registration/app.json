@@ -18,6 +18,10 @@
             {
                 "id": "org.bahmni.registration.conceptSetGroup.observations",
                 "description": "Registration Second Page Forms"
+            },
+            {
+                "id": "org.bahmni.patient.searchPrograms",
+                "description": "Search for program patients"
             }
         ],
         "contextModel": [
@@ -122,7 +126,13 @@
                     "label": "रुग्णाचे नाव",
                     "placeholder": "रुग्णाचे नाव",
                     "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal"]
+                },
+                "programAttributes": {
+                    "label": "ART No.",
+                    "placeholder": "ART_No.",
+                    "field": "ID_Number"
                 }
+                    
             }
         }
 }
