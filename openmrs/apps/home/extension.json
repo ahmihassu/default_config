@@ -37,7 +37,7 @@
     "url": "../adt/",
     "icon": "icon-bahmni-inpatient",
     "order": 4,
-    "requiredPrivilege": "app:adt"
+    "requiredPrivilege": "app:ipd"
   },
   "bahmniIpd": {
     "id": "bahmni.ipd",
@@ -48,7 +48,7 @@
     "url": "../bedmanagement/#/home",
     "icon": "fa-bed",
     "order": 7,
-    "requiredPrivilege": "app:adt"
+    "requiredPrivilege": "app:bed"
   },
   "radiologyDocumentUpload": {
     "id": "bahmni.radiology.document.upload",
