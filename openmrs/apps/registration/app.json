@@ -200,12 +200,12 @@
         "patientSearch": {
             "address": {
                 "label": "Woreda/Subcity",
-                "placeholder": "ወረዳ/ክፍለ ከተማ ",
+                "placeholder": "Woreda/Subcity",
                 "field": "City_Village"
             }, 
             "customAttributes": {
               "label": "Phone Number",
-              "placeholder": "ስልክ ቁጥር",
+              "placeholder": "Phone Number",
               "fields": ["Phone Number"]
             },
             "programAttributes": {
