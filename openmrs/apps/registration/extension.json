@@ -121,7 +121,8 @@
             "translationKey": "Cental Triage Form",
            
             "required":true,
-            "showLatest": true
+            "showLatest": true,
+            "conditionsDisplay": true
         },
         "order": 1,
         "requiredPrivilege": "Edit Visits"
@@ -134,10 +135,17 @@
             "formName": "Central Triage Form",
             "conceptNames": ["Systolic Data", "Diastolic Data", "Posture", "Temperature Data", "RR Data", "SPO2 Data","RBS", "FBS", "Triage category","HEIGHT", "WEIGHT", "BMI Data", "BMI Status Data"],
             "required":true,
-            "showLatest": true
+            "showLatest": true,
+            "conditionsDisplay": true
+
         },
         "order": 3,
         "requiredPrivilege": "Edit Visits"
+    },
+    "conditions": {
+        "translationKey":"CONDITION_LIST_DISPLAY_CONTROL_TITLE",
+        "type": "conditionsList",
+        "displayOrder": 20
     },
     "obTriageValues":{
         "id": "bahmni.registration.conceptSetGroup.obTriageValues",
