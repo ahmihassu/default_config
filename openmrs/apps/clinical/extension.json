@@ -65,7 +65,7 @@
     },
     "label": "Active",
     "order": 1,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:admin"
   },
   "bahmniClinicalPatientsSearchActivePatientsForPrograms": {
     "id": "bahmni.clinical.patients.search.activePatients",
@@ -78,7 +78,7 @@
     },
     "label": "Active",
     "order": 1,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical2"
   },
   "bahmniClinicalPatientsASearchActivePatientsByProvider": {
     "id": "bahmni.clinical.patients.search.activePatientsByProvider",
@@ -104,7 +104,7 @@
     },
     "label": "OPD-1",
     "order": 3,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical2"
   },
   "bahmniClinicalLinkageInPatients": {
     "id": "bahmni.clinical.patients.search.linkedPatients",
@@ -130,7 +130,7 @@
     },
     "label": "Active",
     "order": 4,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical2"
   },
   "bahmniClinicalPatientsSearchAllPatients": {
     "id": "bahmni.clinical.patients.search.allPatients",
@@ -142,7 +142,7 @@
     },
     "label": "All",
     "order": 5,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical2"
   },
   "bahmniClinicalConceptSetGroupObservationsHistory": {
     "id": "bahmni.clinical.conceptSetGroup.observations.history",
