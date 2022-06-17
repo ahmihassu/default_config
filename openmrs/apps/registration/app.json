@@ -139,7 +139,9 @@
             {
                 "translationKey": "REGISTRATION_PRINT_REG_CARD_LOCAL_KEY",
                 "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/",
-                "shortcutKey": "c"
+                "shortcutKey": "c",
+                "id": "org.bahmni.registration.conceptSetGroup.observations",
+                "description": "Registration Second Page Forms"
             }
         ],
         "conceptSetUI": {
