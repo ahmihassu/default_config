@@ -1,4 +1,14 @@
 {
+  "emergency_triage": {
+    "id": "bahmni.registration",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_TRIAGE_KEY",
+    "url": "../registration/index.html#/patient/triagePatient",
+    "icon": "fa-ambulance",
+    "order": 1,
+    "requiredPrivilege": "app:emergency"
+  },
   "registration": {
     "id": "bahmni.registration",
     "extensionPointId": "org.bahmni.home.dashboard",
@@ -14,7 +24,7 @@
     "extensionPointId": "org.bahmni.home.dashboard",
     "type": "link",
     "translationKey": "MODULE_LABEL_PROGRAMS_KEY",
-    "url": "../clinical/#/programs/patient/search",
+    "url": "../clinical/#/programs/patient/searchProgram",
     "icon": "icon-bahmni-program",
     "order": 2,
     "requiredPrivilege": "app:clinical"
@@ -37,7 +47,7 @@
     "url": "../adt/",
     "icon": "icon-bahmni-inpatient",
     "order": 4,
-    "requiredPrivilege": "app:adt"
+    "requiredPrivilege": "app:ipd"
   },
   "bahmniIpd": {
     "id": "bahmni.ipd",
@@ -48,7 +58,7 @@
     "url": "../bedmanagement/#/home",
     "icon": "fa-bed",
     "order": 7,
-    "requiredPrivilege": "app:adt"
+    "requiredPrivilege": "app:bed"
   },
   "radiologyDocumentUpload": {
     "id": "bahmni.radiology.document.upload",
@@ -104,7 +114,7 @@
     "id": "bahmni.ot",
     "extensionPointId": "org.bahmni.home.dashboard",
     "type": "link",
-    "translationKey": "Operation Theatre",
+    "translationKey": "Operation Room",
     "url": "../ot/",
     "icon": "fa-hospital-o",
     "order": 9,

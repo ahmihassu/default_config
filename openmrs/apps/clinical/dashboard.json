@@ -19,6 +19,54 @@
                     "countyDistrict"
                 ]
             },
+            "triageValue":{
+                "translationKey":"DASHBOARD_TITLE_EMERGENCY_DEPARTMENT_TRIAGE_FORM_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":10,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Triage Record Vital Sign", "Triage color", "Triage Color Result", "Triage Score Result"
+                    ],
+                    "showDetailsButton":true,
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Triage Record Vital Sign", "Triage color", "Triage Color Result", "Triage Score Result"
+                    ],
+                    "numberOfVisits":2,
+                    "scope":"latest",
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            },
+            "centralTriageValue":{
+                "translationKey":"DASHBOARD_TITLE_CENTRAL_TRIAGE_FORM_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "displayOrder":11,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Central Triage Form"
+                    ],
+                    "showDetailsButton":true,
+                    "numberOfVisits":2
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Central Triage Form"
+                    ],
+                    "numberOfVisits":2,
+                    "scope":"latest",
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            },
             "forms2Validations": {
                 "type": "formsV2",
                 "displayOrder": 2,
@@ -383,6 +431,25 @@
                     }
                 }
             },
+            "otFollowupForm":{  
+                    "translationKey":"Ot Followup Form",
+                    "type":"otFollowupForm",
+                    "isObservation":true,
+                    "displayOrder":24,
+                    "dashboardConfig":{  
+                        "showDetailsButton":true,
+                        "conceptNames":["Ot Observations Templates"],
+                        "numberOfVisits":4
+                    },
+                    "expandedViewConfig":{  
+                        "conceptNames":["Ot Observations Templates"],
+                        "numberOfVisits":4,
+                        "showDetailsButton":true,
+                        "pivotTable":{  
+    
+                        }
+                    }
+                },
             "admissionDetails":{  
                 "translationKey":"DASHBOARD_TITLE_ADMISSION_DETAILS_KEY",
                 "type":"admissionDetails",
