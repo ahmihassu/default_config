@@ -119,6 +119,36 @@
             "Coded3": {
                 "multiSelect": true
             },
+            "Triage Chief Complaint":{
+                "multiSelect": true
+            },
+            "Triage Red":{
+                "multiSelect": true
+            },
+            "Triage Orange":{
+                "multiSelect": true
+            },
+            "ED Triage, Plan":{
+                "multiSelect": true
+            },
+            "Past OI":{
+                "multiSelect": true
+            },
+            "Presenting Symptom at ART enrollment":{
+                "multiSelect": true
+            },
+            "Took OPV":{
+                "multiSelect": true
+            },
+            "Took Pentavalent":{
+                "multiSelect": true
+            },
+            "Took Rota":{
+                "multiSelect": true
+            },
+            "Lines/catheters":{
+                "multiSelect": true
+            },
             "Image": {
                 "allowAddMore": true
             },
