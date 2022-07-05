@@ -43,6 +43,10 @@
             "MaleGreaterThan18":["Adult ER"],
             "MaleLessThan18":["Adult ER",  "Pediatrics ER"]
         },
+        "paymentConfig":{
+            "disable billing": false,
+            "payment window": 30
+        },
         "erTriageFormLookup":{
             "Gynecology Emergency":["edconfig","edforms"],
             "Adult ER": ["erconfig","erforms"],
