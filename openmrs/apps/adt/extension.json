@@ -9,7 +9,7 @@
             "showCondition":"visitExists"
         },
         "order": 2,
-        "requiredPrivilege": "app:adt"
+        "requiredPrivilege": "app:admit"
     },
     "bahmniAdtAdmitCancel":{
         "id": "bahmni.adt.admit.cancel",
@@ -20,7 +20,7 @@
             "action":"cancel"
         },
         "order": 3,
-        "requiredPrivilege": "app:adt"
+        "requiredPrivilege": "app:admit"
     },
     "bahmniAdtTransferSave":{
         "id": "bahmni.adt.transfer.save",
@@ -31,7 +31,7 @@
             "action":"transfer"
         },
         "order": 1,
-        "requiredPrivilege": "app:adt"
+        "requiredPrivilege": "app:transfer"
     },
     "bahmniAdtTransferCancel":{
         "id": "bahmni.adt.transfer.cancel",
@@ -42,7 +42,7 @@
             "action":"cancel"
         },
         "order": 2,
-        "requiredPrivilege": "app:adt"
+        "requiredPrivilege": "app:transfer"
     },
     "bahmniAdtDischargeSave":{
         "id": "bahmni.adt.discharge.save",
@@ -53,7 +53,7 @@
             "action":"discharge"
         },
         "order": 2,
-        "requiredPrivilege": "app:adt"
+        "requiredPrivilege": "app:discharge"
     },
     "bahmniAdtDischargeCancel":{
         "id": "bahmni.adt.discharge.cancel",
@@ -64,7 +64,7 @@
             "action":"cancel"
         },
         "order": 3,
-        "requiredPrivilege": "app:adt"
+        "requiredPrivilege": "app:discharge"
     },
     "bahmniAdtUndoDischarge":{
         "id": "bahmni.adt.undo.discharge",
@@ -75,7 +75,7 @@
             "action":"undoDischarge"
         },
         "order": 1,
-        "requiredPrivilege": "app:adt"
+        "requiredPrivilege": "app:discharge"
     },
     "bahmniAdtUndoDischargeCancel":{
         "id": "bahmni.adt.undo.discharge.cancel",
@@ -86,7 +86,7 @@
             "action":"cancel"
         },
         "order": 2,
-        "requiredPrivilege": "app:adt"
+        "requiredPrivilege": "app:discharge"
     },
     "bahmniAdtPatientsSearchPatientsToAdmit":{
         "id": "bahmni.adt.patients.search.patientsToAdmit",
