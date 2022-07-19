@@ -110,6 +110,16 @@
     "order": 8,
     "requiredPrivilege": "app:reports"
   },
+  "audit": {
+    "id": "bahmni.audit",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_SERVICE_AUDIT_KEY",
+    "url": "../registration/index.html#/serviceAudit",
+    "icon": "icon-bahmni-reports",
+    "order": 8,
+    "requiredPrivilege": "app:reports"
+  },
   "bahmniOT": {
     "id": "bahmni.ot",
     "extensionPointId": "org.bahmni.home.dashboard",
