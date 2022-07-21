@@ -1,0 +1,26 @@
+<!-- <div class="print-wrapper"> -->
+  <div class="print-wrapper">
+    <div style=" text-align: center;color: black; margin-bottom: 10px;">
+      <h1 style="font-size: 14pt;margin-bottom: 0;color: black;font-family: Arial, sans-serif;" >
+        <span style="font-family:nyala">Tirunesh Bejining Hospital</span> <br/>
+    </h1>
+    </div>
+    
+    <h4 style="text-align: center;">Tirunesh Bejining Central Triage Form</h4>
+     <link rel="stylesheet" href="../styles/registrationPrint.css" media="all"/> 
+    <h4>Patient MRN <span style="text-decoration: underline;"> {{patient.primaryIdentifier.identifier}}</span></h4>
+      
+          
+          <div style="width: 50%; height: 80vh; float: left; margin-right: 10%;">
+          <div bahmni-observation patient="patient" config="{conceptNames: ['Systolic Data', 'Diastolic Data', 'Posture', 'Temperature Data', 'RR Data', 'SPO2 Data', 'HEIGHT', 'WEIGHT', 'BMI Data', 'BMI Status Data'], scope: 'latest'}" ertriageprint="true"></div>
+          </div>
+          <div style="width: 40%; height: 80vh; float: right;">
+          <div bahmni-observation patient="patient" config="{conceptNames: ['HEIGHT', 'WEIGHT', 'BMI Data', 'BMI Status Data'], scope: 'latest'}"
+                     ertrigeprint="true"></div>   
+          </div>
+          <div style="text-align: right;position:fixed;bottom: 40px;right: 40px;"><strong>{{currentUser.person.personName.givenName +" " + currentUser.person.personName.familyName+ " "}}   ___________</strong></div>                   
+           
+</div>
+    
+    
+
