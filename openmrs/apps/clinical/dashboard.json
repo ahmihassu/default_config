@@ -85,6 +85,29 @@
                 "showDetailsButton":true,
                 "displayOrder":1
             },
+            "consultationSummary":{
+                "translationKey":"CONSULTATION_BOARD_LABEL_KEY",
+                "type":"vitals",
+                "isObservation":true,
+                "dashboardConfig":{
+                    "conceptNames":[
+                        "Consultation Note"
+                    ],
+                    "showDetailsButton":true,
+                    "numberOfVisits":1
+                },
+                "expandedViewConfig":{
+                    "conceptNames":[
+                        "Consultation Note"
+                    ],
+                    "numberOfVisits":1,
+                    "scope":"latest",
+                    "showDetailsButton":true,
+                    "pivotTable":{
+
+                    }
+                }
+            },
             "navigationLinksControl":{  
                 "translationKey":"DASHBOARD_TITLE_NAVIGATION_LINKS_CONTROL_KEY",
                 "type":"navigationLinksControl",

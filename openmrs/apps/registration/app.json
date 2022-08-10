@@ -69,7 +69,14 @@
                 "title": "Credit Information",
                 "translationKey": "Credit Details",
                 "attributes": [
-                    "credit companies"
+                    "Credit Information"
+                ]
+            },
+            "creditCompanies": {
+                "title": "Credit Companies",
+                "translationKey": "Credit Companies",
+                "attributes": [
+                    "Credit Companies"
                 ]
             },
             "freeInformation": {
