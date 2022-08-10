@@ -117,7 +117,8 @@
                 "Triage Mobility", "Triage AVPU", "Triage Trauma", "Triage Red", "Triage Orange", "Triage Yellow",
                 "Triage Score Result", "Triage Color Result", "Nutritional Values", "Triage Other History", "Triage Intervention and Medication Given", "Nutritional Values", "Triage Waiting Time"],
            "required":true,
-            "showLatest": true
+            "showLatest": true,
+            "conditionsDisplay": true
         },
         "order": 3,
         "requiredPrivilege": "Edit Visits"
