@@ -28,7 +28,7 @@ Bahmni.ConceptSet.FormConditions.rules = {
     "ED Triage, Vaginal Bleeding": function(formName, formFieldValues) {
         var conditions = {show: [], hide: []};
         var vaginalBleeding = formFieldValues['ED Triage, Vaginal Bleeding'];
-
+       //embarassing
         if(vaginalBleeding==true) {
             conditions.show.push("ED Triage, If yes");
         } else{
