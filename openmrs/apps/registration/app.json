@@ -44,7 +44,7 @@
             "MaleLessThan18":["Adult ER",  "Pediatrics ER"]
         },
         "paymentConfig":{
-            "disable billing": false,
+            "disable billing": true,
             "payment window": 30
         },
         "erTriageFormLookup":{
