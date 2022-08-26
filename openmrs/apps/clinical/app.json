@@ -23,52 +23,71 @@
         "visitUuid"
     ],
     "config": {
-        "paymentConfig":{
+        "paymentConfig": {
             "disable checking": true
         },
         "hideConditions": false,
-        "enableRadiologyOrderOptions":["Urgent","NeedsPrint"],
-        "enableLabOrderOptions":["Urgent", "NeedsPrint"],
-        "quickPrints":false,
-        "networkConnectivity" : {
+        "enableRadiologyOrderOptions": [
+            "Urgent",
+            "NeedsPrint"
+        ],
+        "enableLabOrderOptions": [
+            "Urgent",
+            "NeedsPrint"
+        ],
+        "quickPrints": false,
+        "networkConnectivity": {
             "showNetworkStatusMessage": false,
             "networkStatusCheckInterval": 20000,
-            "locales" : [
-                { "locale" : "fr", "css" : "offline-language-french"},
-                { "locale" : "es", "css": "offline-language-spanish"},
-                { "locale" : "pt", "css": "offline-language-portuguese-brazil"}
+            "locales": [
+                {
+                    "locale": "fr",
+                    "css": "offline-language-french"
+                },
+                {
+                    "locale": "es",
+                    "css": "offline-language-spanish"
+                },
+                {
+                    "locale": "pt",
+                    "css": "offline-language-portuguese-brazil"
+                }
             ]
         },
-    	"diagnosisStatus": "Inactive",
-            "program": {
-                "patientInformation": {
-                    "ageLimit": 100
-                },
-                "ID_Number": {
-                    "required" : true
-                },
-                "Co-morbidites": {
-                    "excludeFrom": ["HIV Program"]
-                },
-                "Doctor": {
-                    "excludeFrom": ["TB Program"]
-                }
+        "diagnosisStatus": "Inactive",
+        "program": {
+            "patientInformation": {
+                "ageLimit": 100
             },
-            "patientContext": {
-        		"programAttributes": [
-            		"Id_Number",
-            		"Doctor",
-            		"Stage"
-        		],
-        		"personAttributes": [
-            		"class",
-            		"caste"
-        		],
-        		"additionalPatientIdentifiers": [
-           			"National ID"
-       		],
-        		"preferredIdentifier": "Id_Number"
-    	},
+            "ID_Number": {
+                "required": true
+            },
+            "Co-morbidites": {
+                "excludeFrom": [
+                    "HIV Program"
+                ]
+            },
+            "Doctor": {
+                "excludeFrom": [
+                    "TB Program"
+                ]
+            }
+        },
+        "patientContext": {
+            "programAttributes": [
+                "Id_Number",
+                "Doctor",
+                "Stage"
+            ],
+            "personAttributes": [
+                "class",
+                "caste"
+            ],
+            "additionalPatientIdentifiers": [
+                "National ID"
+            ],
+            "preferredIdentifier": "Id_Number"
+        },
         "obsIgnoreList": [
             "REGISTRATION FEES",
             "COMMENTS",
@@ -85,15 +104,15 @@
         "allowOnlyCodedDiagnosis": false,
         "conceptSetUI": {
             "Chief Complaint Data": {
-                "autocomplete":true,
-                "codedConceptName":"Chief Complaint",
-                "nonCodedConceptName":"Non-Coded Chief Complaint",
+                "autocomplete": true,
+                "codedConceptName": "Chief Complaint",
+                "nonCodedConceptName": "Non-Coded Chief Complaint",
                 "durationRequired": false,
                 "allowAddMore": true
             },
-            "Tuberculosis, Adverse Effects" :{
-                "multiSelect" : true,
-                "autocomplete" : true
+            "Tuberculosis, Adverse Effects": {
+                "multiSelect": true,
+                "autocomplete": true
             },
             "Posture": {
                 "buttonSelect": true
@@ -122,34 +141,34 @@
             "Coded3": {
                 "multiSelect": true
             },
-            "Triage Chief Complaint":{
+            "Triage Chief Complaint": {
                 "multiSelect": true
             },
-            "Triage Red":{
+            "Triage Red": {
                 "multiSelect": true
             },
-            "Triage Orange":{
+            "Triage Orange": {
                 "multiSelect": true
             },
-            "ED Triage, Plan":{
+            "ED Triage, Plan": {
                 "multiSelect": true
             },
-            "Past OI":{
+            "Past OI": {
                 "multiSelect": true
             },
-            "Presenting Symptom at ART enrollment":{
+            "Presenting Symptom at ART enrollment": {
                 "multiSelect": true
             },
-            "Took OPV":{
+            "Took OPV": {
                 "multiSelect": true
             },
-            "Took Pentavalent":{
+            "Took Pentavalent": {
                 "multiSelect": true
             },
-            "Took Rota":{
+            "Took Rota": {
                 "multiSelect": true
             },
-            "Lines/catheters":{
+            "Lines/catheters": {
                 "multiSelect": true
             },
             "Image": {
@@ -160,6 +179,549 @@
             },
             "Accepted Family Planning methods": {
                 "multiSelect": true
+            },
+            "Nursing Assessment, Patient's Support": {
+                "allowAddMore": true
+            },
+            "Nursing Assessment, Current Medication (Chart Review)": {
+                "allowAddMore": true
+            },
+            "Medication Notes ": {
+                "allowAddMore": true
+            },
+            "Food Notes": {
+                "allowAddMore": true
+            },
+            "If other specify": {
+                "allowAddMore": true
+            },
+            "Vital Sign and Pain Tracker Format": {
+                "allowAddMore": true
+            },
+            "Diabetes Follow up, Sibling": {
+                "allowAddMore": true
+            },
+            "Diabetes Follow up, Anti Platlet": {
+                "allowAddMore": true
+            },
+            "Diabetes Follow up, Dyslipidemia Treatment set": {
+                "allowAddMore": true
+            },
+            "Medication to be administered set": {
+                "allowAddMore": true
+            },
+            "Medication Administration": {
+                "allowAddMore": true
+            },
+            "Problem Set": {
+                "allowAddMore": true
+            },
+            "Nursing/ Midwife Progress note": {
+                "allowAddMore": true
+            },
+            "Activity Record Set": {
+                "allowAddMore": true
+            },
+            "APH Follow up Form": {
+                "allowAddMore": true
+            },
+            "Surgeon": {
+                "allowAddMore": true
+            },
+            "Assistant": {
+                "allowAddMore": true
+            },
+            "TB Treatment Supporter": {
+                "allowAddMore": true
+            },
+            "Medical Diagnosis other than TB": {
+                "allowAddMore": true
+            },
+            "Drug susceptibility test (DST) results": {
+                "allowAddMore": true
+            },
+            "Review panel meetings: Dates and Decisions": {
+                "allowAddMore": true
+            },
+            "Contacts Investigation (Hoouse Hold, Close Contact)": {
+                "allowAddMore": true
+            },
+            "MDR TB Regimen": {
+                "allowAddMore": true
+            },
+            "Sputum Smear Microscopy": {
+                "allowAddMore": true
+            },
+            "MDR TB Culture results set": {
+                "allowAddMore": true
+            },
+            "MDR TB Follow up, Scheduled Laboratory Monitoring": {
+                "allowAddMore": true
+            },
+            "TB Drugs Adverse Effects": {
+                "allowAddMore": true
+            },
+            "Fluid Balance (Input Output) Record Sheet": {
+                "allowAddMore": true
+            },
+            "IV Fluid Given Set": {
+                "allowAddMore": true
+            },
+            "DKA Follow up Sheet": {
+                "allowAddMore": true
+            },
+            "Time medication given": {
+                "allowAddMore": true
+            },
+            "Midwives Vital Sign Sheet": {
+                "allowAddMore": true
+            },
+            "Nursing/ Midwifery Activity Sheet": {
+                "allowAddMore": true
+            },
+            "Last Immunization": {
+                "allowAddMore": true
+            },
+            "Nursing and Midwife Comprehensive Assessment Clinical Data": {
+                "allowAddMore": true
+            },
+            "Summary of subjective and objective data": {
+                "allowAddMore": true
+            },
+            "Nursing/ Midwifery Problem Index List": {
+                "allowAddMore": true
+            },
+            "Nursing/ Midwifery Care Plan": {
+                "allowAddMore": true
+            },
+            "Implementation Notes": {
+                "allowAddMore": true
+            },
+            "PROM Follow up Sheet": {
+                "allowAddMore": true
+            },
+            "Patient Acceptance Note": {
+                "allowAddMore": true
+            },
+            "Current ART regimen Notes Set": {
+                "allowAddMore": true
+            },
+            "Treatment Supporter": {
+                "allowAddMore": true
+            },
+            "Diabetes Follow up, Hypertension treatment": {
+                "allowAddMore": true
+            },
+            "Diabetes Follow up, Dyslipidemia Treatment": {
+                "allowAddMore": true
+            },
+            "Diabetes Follow up, Antiplatelet": {
+                "allowAddMore": true
+            },
+            "Diabetes Follow up, Other Mediacation set": {
+                "allowAddMore": true
+            },
+            "Diabetes Follow up, Other Anti-hypertensives set": {
+                "allowAddMore": true
+            },
+            "Vitals": {
+                "allowAddMore": true
+            },
+            "PrEP Follow up Elicited contacts HIV status Set": {
+                "allowAddMore": true
+            },
+            "PrEP Follow Up set": {
+                "allowAddMore": true
+            },
+            "Medical and Surgical Referral clinic follow up": {
+                "allowAddMore": true
+            },
+            "Vital Sign For Adolescents (above 12)": {
+                "allowAddMore": true
+            },
+            "Vital Sign for School-age (6-12)": {
+                "allowAddMore": true
+            },
+            "Vital Sign for Pre School children (3-6)": {
+                "allowAddMore": true
+            },
+            "Vital Sign for Toddlers (1-3yrs)": {
+                "allowAddMore": true
+            },
+            "Vital Sign for Infants": {
+                "allowAddMore": true
+            },
+            "Vital Sign for Neonates": {
+                "allowAddMore": true
+            },
+            "Premature Vital Sign": {
+                "allowAddMore": true
+            },
+            "Nursing Assessment, Nutrition Metabolism Pattern History of": {
+                "multiSelect": true
+            },
+            "Nursing Assessment Activity Exercise Pattern  Complaints": {
+                "multiSelect": true
+            },
+            "Able to Read/ Write": {
+                "multiSelect": true
+            },
+            "During Acute pain Coded": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Family history of": {
+                "multiSelect": true
+            },
+            "Cardiac Follow up, Symptoms": {
+                "multiSelect": true
+            },
+            "Cardiac Follow up, Symptoms For age >5": {
+                "multiSelect": true
+            },
+            "Cardiac Follow up Signs": {
+                "multiSelect": true
+            },
+            "Murmur Type Coded": {
+                "multiSelect": true
+            },
+            "Murmur Site": {
+                "multiSelect": true
+            },
+            "Cardiac Follow up Diagnosis Coded": {
+                "multiSelect": true
+            },
+            "Apical Impulse Coded": {
+                "multiSelect": true
+            },
+            "ANC Visit Number Coded": {
+                "multiSelect": true
+            },
+            "Heaves Coded": {
+                "multiSelect": true
+            },
+            "Diabetes Follow up Hypertension Drug/ LSM (13061)": {
+                "multiSelect": true
+            },
+            "Pregnant and Lactating women Nutritional Counseling (NC)": {
+                "multiSelect": true
+            },
+            "Childhood Illness, General Danger Signs, Symptoms": {
+                "multiSelect": true
+            },
+            "Acute Respiratory Illness, Symptoms": {
+                "multiSelect": true
+            },
+            "Microscopic Malaria Test Result": {
+                "multiSelect": true
+            },
+            "Fever, Symptoms": {
+                "multiSelect": true
+            },
+            "Ear Symptoms": {
+                "multiSelect": true
+            },
+            "Childhood Illness, Tuberculosis (TB) Suspicion": {
+                "multiSelect": true
+            },
+            "Childhood Illness, Counsel mother about": {
+                "multiSelect": true
+            },
+            "Childhood Illness, Sign and symptom": {
+                "multiSelect": true
+            },
+            "Diarrhoea, Symptoms": {
+                "multiSelect": true
+            },
+            "Child Feeding by": {
+                "multiSelect": true
+            },
+            "Feeding Problem/Low Weight in HIV Positive Mother Who Decided Not to Breastfeed": {
+                "multiSelect": true
+            },
+            "Breast Feeding Attachment": {
+                "multiSelect": true
+            },
+            "Childhood Illness, Below 2 months Counsel the Mother": {
+                "multiSelect": true
+            },
+            "Which Eye Coded": {
+                "multiSelect": true
+            },
+            "Trabeculectomy, Exposure/ Stay stature (11426)": {
+                "multiSelect": true
+            },
+            "MDR TB Follow up Outcome": {
+                "multiSelect": true
+            },
+            "Type of Substance Use": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Skin Color": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Skin Lesion": {
+                "multiSelect": true
+            },
+            "Oral Mucosa Color": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Teeth": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Tongue": {
+                "multiSelect": true
+            },
+            "Nail Color": {
+                "multiSelect": true
+            },
+            "Stool Consistency Coded": {
+                "multiSelect": true
+            },
+            "HX of Bowel surgery": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Urine Color": {
+                "multiSelect": true
+            },
+            "Nursing Assessment Urinary Compliant": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Any difficulty with daily living activities of": {
+                "multiSelect": true
+            },
+            "Thorax Shape Coded": {
+                "multiSelect": true
+            },
+            "Chest auscultation Findings Coded": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Cardiovascular": {
+                "multiSelect": true
+            },
+            "Sleep Adequacy Coded": {
+                "multiSelect": true
+            },
+            "Chronic pain expressed by Coded": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Nipple": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Lymph node": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Testicular Exam": {
+                "multiSelect": true
+            },
+            "Nursing Assessment, Penile exam": {
+                "multiSelect": true
+            },
+            "Pregnant and Lactating women Nutritional Action": {
+                "multiSelect": true
+            },
+            "Type of Anesthesia used for trabeculectomy": {
+                "multiSelect": true
+            },
+            "Eye surgery anesthesia Route": {
+                "multiSelect": true
+            },
+            "Trabeculectomy, Skin/ Conjunctival Preparation": {
+                "multiSelect": true
+            },
+            "Trabeculectomy, Exposure/ Stay stature": {
+                "multiSelect": true
+            },
+            "Conjunctival flap": {
+                "multiSelect": true
+            },
+            "Scleral flap shape and size": {
+                "multiSelect": true
+            },
+            "Antimetabolite": {
+                "multiSelect": true
+            },
+            "Safe childbirth checklist, after birth Newborn": {
+                "multiSelect": true
+            },
+            "If mother HIV+ mother is on ART and Baby has neverapine syrup for 6 wks": {
+                "multiSelect": true
+            },
+            "Safe Childbirth checklist, Confirm": {
+                "multiSelect": true
+            },
+            "Safe Birth Checklist, Are essential supplies at bed side for baby": {
+                "multiSelect": true
+            },
+            "Safe Birth Checklist, Are essential supplies at bed side for mother": {
+                "multiSelect": true
+            },
+            "Enrollment to DSD Models": {
+                "multiSelect": true
+            },
+            "Risk Factors": {
+                "multiSelect": true
+            },
+            "Diabetes Risk Factors": {
+                "multiSelect": true
+            },
+            "Diabetes Follow up DM Drug / LSM": {
+                "multiSelect": true
+            },
+            "Diabetes Follow up Hypertension Drug/ LSM": {
+                "multiSelect": true
+            },
+            "Diabetes Follow up, Symptoms": {
+                "multiSelect": true
+            },
+            "Diabetic Complications": {
+                "multiSelect": true
+            },
+            "Health Education and Counseling on Healthy Behaviour": {
+                "multiSelect": true
+            },
+            "Family Planning Method in use": {
+                "multiSelect": true
+            },
+            "OIs/HIV related cancers": {
+                "multiSelect": true
+            },
+            "Side Effects": {
+                "multiSelect": true
+            },
+            "HIV Prevention Plan": {
+                "multiSelect": true
+            },
+            "AMTSL": {
+                "multiSelect": true
+            },
+            "Placenta Delivered by": {
+                "multiSelect": true
+            },
+            "Essential Newborn Care": {
+                "multiSelect": true
+            },
+            "HIV Status Notification Plan Coded": {
+                "multiSelect": true
+            },
+            "Reason for Family Planning removal": {
+                "multiSelect": true
+            },
+            "Target Population Category Coded": {
+                "multiSelect": true
+            },
+            "Family Planning Method Provided Coded": {
+                "multiSelect": true
+            },
+            "Reason for FP Method Switch": {
+                "multiSelect": true
+            },
+            "Type of Abortion": {
+                "multiSelect": true
+            },
+            "Type of Evacuation": {
+                "multiSelect": true
+            },
+            "Contraception Used in Past Coded": {
+                "multiSelect": true
+            },
+            "Post Delivery FP Checklist, Reason for FP Discontinuation": {
+                "multiSelect": true
+            },
+            "Post Delivery FP Checklist, FP method Patient Interested In": {
+                "multiSelect": true
+            },
+            "Post Delivery FP Checklist, FP Method Patient Went Home With": {
+                "multiSelect": true
+            },
+            "Post Delivery FP Checklist, Referred to Higher Center for FP": {
+                "multiSelect": true
+            },
+            "BCG Date": {
+                "allowFutureDates": true
+            },
+            "Polio 0 Date": {
+                "allowFutureDates": true
+            },
+            "Next Date": {
+                "allowFutureDates": true
+            },
+            "EDD": {
+                "allowFutureDates": true
+            },
+            "VIA Negative, return for re-screening on": {
+                "allowFutureDates": true
+            },
+            "result recieved date": {
+                "allowFutureDates": true
+            },
+            "OPV 0": {
+                "allowFutureDates": true
+            },
+            "OPV1": {
+                "allowFutureDates": true
+            },
+            "OPV 2": {
+                "allowFutureDates": true
+            },
+            "OPV 3": {
+                "allowFutureDates": true
+            },
+            "IPV": {
+                "allowFutureDates": true
+            },
+            "DPT-HepB-Hib 1": {
+                "allowFutureDates": true
+            },
+            "DPT-HepB-Hib 2": {
+                "allowFutureDates": true
+            },
+            "DPT-HepB-Hib 3": {
+                "allowFutureDates": true
+            },
+            "PCV 1": {
+                "allowFutureDates": true
+            },
+            "PCV 2": {
+                "allowFutureDates": true
+            },
+            "PCV 3": {
+                "allowFutureDates": true
+            },
+            "Rota 1": {
+                "allowFutureDates": true
+            },
+            "Rota 2": {
+                "allowFutureDates": true
+            },
+            "Measeles": {
+                "allowFutureDates": true
+            },
+            "Measles 2": {
+                "allowFutureDates": true
+            },
+            "IIC Vitamin A": {
+                "allowFutureDates": true
+            },
+            "Other Vaccine Date": {
+                "allowFutureDates": true
+            },
+            "First appointment": {
+                "allowFutureDates": true
+            },
+            "Second appointment": {
+                "allowFutureDates": true
+            },
+            "Third appointment": {
+                "allowFutureDates": true
+            },
+            "Fourth appointment": {
+                "allowFutureDates": true
+            },
+            "EDR Date and Time of Discharge": {
+                "allowFutureDates": true
+            },
+            "HEIF Next visit date": {
+                "allowFutureDates": true
             },
             "defaults": {
                 "Number of living children": 1,
