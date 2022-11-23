@@ -35,7 +35,7 @@
             "Urgent",
             "NeedsPrint"
         ],
-        "quickPrints": false,
+        "quickPrints": true,
         "networkConnectivity": {
             "showNetworkStatusMessage": false,
             "networkStatusCheckInterval": 20000,
