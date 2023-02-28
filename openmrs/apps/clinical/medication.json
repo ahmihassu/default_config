@@ -12,6 +12,11 @@
         "defaultInstructions": "As directed",
         "frequencyDefaultDurationUnitsMap": [
           {
+            "minFrequency": null,
+            "maxFrequency": "1/24",
+            "defaultDurationUnit": "Hour(s)"
+          },
+          {
             "minFrequency": "1/7",
             "maxFrequency": 5,
             "defaultDurationUnit": "Day(s)"
@@ -97,6 +102,18 @@
           },
           "Tablet": {
             "doseUnits": "Tablet(s)",
+            "route": "Oral"
+          },
+          "Oral Suspension": {
+            "doseUnits": "ml",
+            "route": "Oral"
+          },
+          "Suspension": {
+            "doseUnits": "ml",
+            "route": "Oral"
+          },
+          "Vial": {
+            "doseUnits": "mg",
             "route": "Oral"
           }
         }
