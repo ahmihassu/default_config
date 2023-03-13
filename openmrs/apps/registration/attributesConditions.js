@@ -46,10 +46,12 @@ Bahmni.Registration.AttributesConditions.rules = {
         else if(patient["Credit Information"] && patient["Credit Information"].value && patient["Credit Information"].value == "CBHI"){
             returnValues.show.push("creditInformation");
             returnValues.hide.push("insuranceInformation");
+            returnValues.hide.push("creditCompanies");
         }
         else {
             returnValues.hide.push("insuranceInformation");
             returnValues.hide.push("creditInformation");
+            returnValues.hide.push("creditCompanies");
            
         }
         return returnValues;

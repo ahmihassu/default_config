@@ -138,6 +138,48 @@
             "Set2": {
                 "allowAddMore": true
             },
+            "Infusion (IV fluid)": {
+                "allowAddMore": true
+            },
+            "IV Fluid": {
+                "allowAddMore": true
+            },
+            "Po/ NGT Input": {
+                "allowAddMore": true   
+            },
+            "Blood Given":{
+                "allowAddMore": true 
+            },
+            "Vital sign": { 
+                "allowAddMore": true 
+            },
+            "O2 (L/min)": {
+                "allowAddMore": true 
+            },
+            "Pain Score": {
+                "allowAddMore": true 
+            },
+            "RBS": {
+                "allowAddMore": true 
+            },
+            "Urine Ketone":{
+                "allowAddMore": true 
+            },
+            "Central Venous Pressure":{
+                "allowAddMore": true 
+            },
+            "Amount Urine output": {
+                "allowAddMore": true 
+            },
+            "Other loss": {
+                "allowAddMore": true 
+            },
+            "GCS": {
+                "allowAddMore": true 
+            },
+            "Sedation scale (RASS)":{
+                "allowAddMore": true 
+            },
             "Coded3": {
                 "multiSelect": true
             },
