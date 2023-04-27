@@ -65,6 +65,7 @@
             ]
         }
     },
+
     "testFormReport":{
     "name": "Test Forms Report",
     "type": "forms",
@@ -94,6 +95,7 @@
      "applyDateRangeFor": "obsDate",
      "visitTypesToFilter": []
      }
+     
     },
     "formBuilderReport":{
         "name": "Form builder form Report",
@@ -672,6 +674,16 @@
       "showOrderDateTime": true
     }
   },
+
+  "OR Report":{
+        "name": "OR Report",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "for_report_OR",
+        "config": {
+          "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/new/OR.sql"
+        }
+    },
+    
   "GenericLabOrderReportAggregation": {
     "name": "Test Name vs Gender",
     "type": "aggregation",
@@ -695,4 +707,5 @@
       ]
     }
   }
+  
 }
