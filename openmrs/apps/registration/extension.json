@@ -159,6 +159,56 @@
         "type": "conditionsList",
         "displayOrder": 20
     },
+    "labValues":{
+        "id": "bahmni.registration.conceptSetGroup.crTriageValues",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "labconfig",
+        "extensionParams": {
+            "conceptName": "Cross Match Results",
+            "conceptNames": ["Cross Match Table", "btrr, bloodgroup rh","btr, unit number","btr, blood group matched","btr, immidiate spin", "btr, complete x match","bt, lb Confirmed and signed"],
+            "translationKey": "Cross Match Results",
+            "required":true,
+            "showLatest": true
+        },
+        "order": 1,
+        "requiredPrivilege": "app:lab"
+    },
+    "seclabValues":{
+        "id": "bahmni.registration.conceptSetGroup.crTriageValues",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "labconfig",
+        "extensionParams": {
+            "conceptName": "TB Result Form",
+            "conceptNames": ["tbrfr, TB Test Result Form", "tbrf, lb confirmed"],
+            "translationKey": "TB Result Form",
+            "required":true,
+            "showLatest": true
+        },
+        "order": 1,
+        "requiredPrivilege": "app:lab"
+    },
+    "labValue":{
+        "id": "bahmni.registration.conceptSetGroup.crTriageValue",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "labforms",
+        "extensionParams": {
+            "Cross Match Results":{
+                "formName": "Cross Match Results",
+                "conceptNames": ["Cross Match Results"],
+                "required":true,
+                "showLatest": true
+            },
+            "TB Result Form":{
+                "formName": "TB Result Form",
+                "conceptNames": ["TB Result Form"],
+                "required":true,
+                "showLatest": true
+            }
+            
+        },
+        "order": 3,
+        "requiredPrivilege": "app:lab"
+    },
     "obTriageValues":{
         "id": "bahmni.registration.conceptSetGroup.obTriageValues",
         "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
