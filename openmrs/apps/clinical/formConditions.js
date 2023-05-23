@@ -1137,4 +1137,37 @@ Bahmni.ConceptSet.FormConditions.rules = {
         }
         return conditions;
     },
+    "tbrf, TB Site": function(formName, formFieldValues) {
+        var conditions = {show: [], hide: []};
+        var site = formFieldValues['tbrf, TB Site'];
+
+        if(site == "tbrf, extra pul") {
+            conditions.show.push("tbrf, if extra pul");
+        } else {
+            conditions.hide.push("tbrf, if extra pul");
+        }
+        return conditions;
+    },
+    "tbrf, previous tb drug use": function(formName, formFieldValues) {
+        var conditions = {show: [], hide: []};
+        var site = formFieldValues['tbrf, previous tb drug use'];
+
+        if(site == "tbrf, Other drugs") {
+            conditions.show.push("tbrf, if other specify");
+        } else {
+            conditions.hide.push("tbrf, if other specify");
+        }
+        return conditions;
+    },
+    "tbrf, Specimen type": function(formName, formFieldValues) {
+        var conditions = {show: [], hide: []};
+        var site = formFieldValues['tbrf, Specimen type'];
+
+        if(site == "tbrf, Other specimen") {
+            conditions.show.push("tbrf, if other specimen");
+        } else {
+            conditions.hide.push("tbrf, if other specimen");
+        }
+        return conditions;
+    }
 };
