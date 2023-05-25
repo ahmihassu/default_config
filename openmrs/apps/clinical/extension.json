@@ -119,6 +119,36 @@
     "order": 2,
     "requiredPrivilege": "app:clinical"
   },
+  "bahmniClinicalPatientsSearchByLabStatus": {
+    "id": "bahmni.clinical.patients.search.patientsByLabStatus",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.PatientsByLabStatus",
+      "translationKey": "MODULE_LABEL_PATIENTS_WITH_LAB_KEY",
+      "forwardUrl": "../clinical/#/default/patient/{{patientUuid}}/dashboard/labVisit/{{visitUuid}}/?encounterUuid=active",
+      "forwardButtonTitle" : "View" 
+    },
+    "label": "Lab",
+    "order": 3,
+    "requiredPrivilege": "app:clinical"
+  },
+    "bahmniClinicalPatientsSearchByRadiologyStatus": {
+    "id": "bahmni.clinical.patients.search.patientsByRadiologyStatus",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.patientsHasPendingOrders",
+      "display":"Orders",
+      "translationKey": "MODULE_LABEL_PATIENTS_WITH_RADIOLOGY_KEY",
+      "forwardUrl": "../orders/#/patient/{{patientUuid}}/fulfillment/Radiology Order",
+      "forwardButtonTitle" : "View"
+        
+    },
+    "label": "Radiology",
+    "order": 4,
+    "requiredPrivilege": "app:clinical"
+  },
   "activePatientsByLocation": {
     "id": "bahmni.clinical.patients.search.activePatientsByLocation",
     "extensionPointId": "org.bahmni.patient.search",
