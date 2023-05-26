@@ -19,6 +19,16 @@
         "order":2,
         "requiredPrivilege": "app:centraltriage"
       },
+      "pediatric_triage": {
+        "id": "bahmni.registration.erTriage",
+        "extensionPointId": "org.bahmni.registration.triage.dashboard",
+        "type": "link",
+        "label": "Pediatric Triage",
+        "url": "#/patient/newCRTriage?from=pediatric",
+        "icon": "fa-child",
+        "order":6,
+        "requiredPrivilege": "app:peditriage"
+      },
      
     "search":{
         "id": "bahmni.registration.navigation.patient.search",
