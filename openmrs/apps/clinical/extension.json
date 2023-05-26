@@ -1,4 +1,15 @@
 {
+  "bahmniClinicalConsultationSpecialOrders": {
+    "id": "bahmni.clinical.consultation.special.orders",
+    "extensionPointId": "org.bahmni.clinical.consultation.board",
+    "type": "link",
+    "label": "Special Orders",
+    "translationKey":"SPECIAL_ORDERS_BOARD_LABEL_KEY",
+    "url": "concept-set-group/specorders",
+    "icon": "icon-user-md",
+    "order": 6,
+    "requiredPrivilege": "app:clinical:ordersTab"
+  },
   "observations": {
     "id": "bahmni.clinical.consultation.observations",
     "extensionPointId": "org.bahmni.clinical.consultation.board",
@@ -92,6 +103,19 @@
     "label": "Active",
     "order": 2,
     "requiredPrivilege": "app:clinical"
+  },
+  "bahmniClinicalPatientsASearchActivePatientsByLab": {
+    "id": "bahmni.clinical.patients.search.lab",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.labSearch",
+      "translationKey": "Lab",
+      "forwardUrl": "../registration/#/patient/{{patientUuid}}/lab"
+    },
+    "label": "Lab",
+    "order": 4,
+    "requiredPrivilege": "app:lab"
   },
   "bahmniClinicalPatientsSearchOPDActivePatientsByProvider": {
     "id": "bahmni.clinical.patients.search.OPDActivePatientsByProvider",
