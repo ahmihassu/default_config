@@ -110,7 +110,7 @@
     "type": "config",
     "extensionParams": {
       "searchHandler": "emrapi.sqlSearch.labSearch",
-      "translationKey": "Lab",
+      "translationKey": "MODULE_LABEL_PATIENTS_WITH_SPECIAL_ORDER_KEY",
       "forwardUrl": "../registration/#/patient/{{patientUuid}}/lab"
     },
     "label": "Lab",
