@@ -773,7 +773,24 @@
                 ],
                 "Pain management given": true,
                 "Safe Abortion, Remarks": "Remarks",
-                "Malaria, Death Date": "2015-12-01"
+                "Malaria, Death Date": "2015-12-01",
+                "bt, dr Confirmed and signed": false,
+                "tbrf, dr confirmed": false
+            },
+            "bt, dr Confirmed and signed": {
+                "required":true
+            },
+            "tbrf, dr confirmed":{
+                "required":true
+            },
+            "tbrf, Requested Test": {
+                "required":true
+            },
+            "btr, immidiate spin": {
+                "allowFutureDates":true
+            },
+            "Blood group & RH N": {
+                "required":true
             }
         },
         "visitPage": {

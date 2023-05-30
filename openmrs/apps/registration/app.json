@@ -138,6 +138,7 @@
         "autoCompleteFields":["familyName", "caste", "middleName", "givenName"],
         "mandatoryPersonAttributes": ["Free", "Credit Information", "InsuranceID", "credit companies", "PaymentMethod"],
         "defaultVisitType": "OPD",
+        "TBIDOffset": 1000,
         "searchByIdForwardUrl": "/patient/{{patientUuid}}",
         "showMiddleName": true,
         "showLastName": true,
@@ -166,7 +167,9 @@
             "defaults":{
                 "FHS": "Present",
                 "Trige Date and time of Arrival": "now",
-                "Trige Date and Time of Triage": "now"
+                "Trige Date and Time of Triage": "now",
+                "tbrf, lb confirmed":false,
+                "bt, lb Confirmed and signed":false
             },
             "Trige Date and time of Arrival": {
                 "required": true
@@ -195,6 +198,33 @@
             },
             "Triage Trauma": {
                 "required": true
+            },
+            "btr, immidiate spin":{
+                "required":true,
+                "disableAddNotes": true,
+                "allowFutureDates": true
+            },
+            "btr, unit number":{
+                "required":true,
+                "disableAddNotes": true
+            },
+            "btr, blood group matched":{
+                "required":true,
+                "disableAddNotes": true
+            },
+            "btrr, bloodgroup rh":{
+                "required":true,
+                "disableAddNotes": true
+            },
+            "btr, complete x match":{
+                "required":true,
+                "disableAddNotes": true
+            },
+            "bt, lb Confirmed and signed": {
+                "required":true
+            },
+            "tbrf, lb confirmed":{
+                "required":true
             }
             
         },
