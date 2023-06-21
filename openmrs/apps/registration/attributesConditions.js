@@ -9,6 +9,7 @@ Bahmni.Registration.AttributesConditions.rules = {
             returnValues.hide.push("insuranceInformation");
             returnValues.hide.push("additionalPatientInformation");
             returnValues.hide.push("freeInformation");
+            returnValues.hide.push("CBHIInformation");
            
            
         }
@@ -18,12 +19,14 @@ Bahmni.Registration.AttributesConditions.rules = {
             returnValues.hide.push("creditInformation");
             returnValues.hide.push("creditCompanies");
             returnValues.hide.push("additionalPatientInformation");
+            returnValues.hide.push("CBHIInformation");
         }
         else {
             returnValues.hide.push("insuranceInformation");
             returnValues.hide.push("creditInformation");
             returnValues.hide.push("creditCompanies");
             returnValues.hide.push("freeInformation");
+            returnValues.hide.push("CBHIInformation");
         }
         return returnValues;
     },
@@ -36,15 +39,16 @@ Bahmni.Registration.AttributesConditions.rules = {
                         returnValues.show.push("creditCompanies");
                         returnValues.show.push("creditInformation");
                         returnValues.hide.push("insuranceInformation");
-
+                        returnValues.hide.push("CBHIInformation")
         }
         else if(patient["Credit Information"] && patient["Credit Information"].value && patient["Credit Information"].value == "Insurance"){
             returnValues.show.push("creditInformation");
             returnValues.show.push("insuranceInformation");
             returnValues.hide.push("creditCompanies");
+            returnValues.hide.push("CBHIInformation")
         }
         else if(patient["Credit Information"] && patient["Credit Information"].value && patient["Credit Information"].value == "CBHI"){
-            returnValues.show.push("creditInformation");
+            returnValues.show.push("CBHIInformation");
             returnValues.hide.push("insuranceInformation");
             returnValues.hide.push("creditCompanies");
         }
@@ -52,6 +56,7 @@ Bahmni.Registration.AttributesConditions.rules = {
             returnValues.hide.push("insuranceInformation");
             returnValues.hide.push("creditInformation");
             returnValues.hide.push("creditCompanies");
+            returnValues.hide.push("CBHIInformation");
            
         }
         return returnValues;
