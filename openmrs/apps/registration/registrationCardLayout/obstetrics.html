@@ -1,0 +1,30 @@
+<!-- <div class="print-wrapper"> -->
+  <link rel="stylesheet" href="/bahmni_config/openmrs/apps/registration/registrationCardLayout/css/print.css"/> 
+    <div class="print-wrapper">
+        <div style=" text-align: center;color: black; margin-bottom: 10px;">
+          <h1 style="font-size: 14pt;margin-bottom: 0;color: black;font-family: Arial, sans-serif;" >
+            <span style="font-family:nyala">Hospital</span>
+        </h1>
+     </div>
+
+        <h4 style="text-align: center;">Labour Ward Form</h4>
+         <link rel="stylesheet" href="../styles/registrationPrint.css" media="all"/>
+         <p>Patient Name 
+             <span class="tick-text"> {{patient.fullNameLocal()}}</span>
+             MRN <span  class="tick-text"> {{patient.primaryIdentifier.identifier}}</span>
+        </p>
+        <p>Age 
+             <span class="tick-text"> {{patient.age | age}}</span>
+             Sex <span  class="tick-text"> {{patient.gender}} </span>
+        </p>
+          <section class="block observation dashboard-section"> 
+              <div>
+              <div bahmni-observation patient="patient" config="{conceptNames: ['Obstetrics'], scope: 'latest'}"
+                        ertraigeprint="true" displaystyle="'normal view'" ></div>
+              </div>
+              <div style="text-align: right;position:fixed;bottom: 40px;right: 40px;"><strong>{{currentUser.person.personName.givenName +" " + currentUser.person.personName.familyName+ " "}}   ___________</strong></div>                   
+               
+    
+          </section>
+        
+    </div>

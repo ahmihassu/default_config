@@ -336,6 +336,9 @@
             "Nursing/ Midwifery Care Plan": {
                 "allowAddMore": true
             },
+            "Implementation" : {
+                "allowAddMore" : true
+            },
             "Implementation Notes": {
                 "allowAddMore": true
             },
