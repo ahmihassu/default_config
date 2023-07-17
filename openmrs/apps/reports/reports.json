@@ -49,10 +49,13 @@
             ],
             "showVisitInfo": true,
             "showProvider": true,
-            "conceptNamesToFilter": [
-            ],
+            "conceptNamesToFilter": [],
             "conceptNameDisplayFormat": "shortNamePreferred",
-            "conceptValuesToFilter": ["0..20","100..","True"],
+            "conceptValuesToFilter": [
+                "0..20",
+                "100..",
+                "True"
+            ],
             "conceptClassesToFilter": [],
             "locationTagsToFilter": [],
             "programsToFilter": [],
@@ -65,39 +68,39 @@
             ]
         }
     },
-
-    "testFormReport":{
-    "name": "Test Forms Report",
-    "type": "forms",
-    "requiredPrivilege": "app:reports",
-     "config": {
-     "patientAttributes": [
-            "caste",
-            "class",
-            "education",
-            "occupation",
-            "primaryContact"
-        ],
-     "patientAddresses": [
-            "address3",
-            "city_village"
-        ],
-     "visitAttributes": [
-            "Visit Status",
-            "Admission Status"
-        ],    
-     "showVisitInfo": true,
-     "showProvider": true,
-     "formNamesToFilter": ["Vitals"],
-     "conceptNameDisplayFormat": "shortNamePreferred",
-     "locationTagsToFilter": [],
-     "programsToFilter": [],
-     "applyDateRangeFor": "obsDate",
-     "visitTypesToFilter": []
-     }
-     
+    "testFormReport": {
+        "name": "Test Forms Report",
+        "type": "forms",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "patientAttributes": [
+                "caste",
+                "class",
+                "education",
+                "occupation",
+                "primaryContact"
+            ],
+            "patientAddresses": [
+                "address3",
+                "city_village"
+            ],
+            "visitAttributes": [
+                "Visit Status",
+                "Admission Status"
+            ],
+            "showVisitInfo": true,
+            "showProvider": true,
+            "formNamesToFilter": [
+                "Vitals"
+            ],
+            "conceptNameDisplayFormat": "shortNamePreferred",
+            "locationTagsToFilter": [],
+            "programsToFilter": [],
+            "applyDateRangeFor": "obsDate",
+            "visitTypesToFilter": []
+        }
     },
-    "formBuilderReport":{
+    "formBuilderReport": {
         "name": "Form builder form Report",
         "type": "formBuilder",
         "requiredPrivilege": "app:reports",
@@ -117,7 +120,9 @@
             ],
             "showVisitInfo": true,
             "showProvider": true,
-            "formNamesToFilter": [ "Test Form"],
+            "formNamesToFilter": [
+                "Test Form"
+            ],
             "conceptNameDisplayFormat": "shortNamePreferred",
             "locationTagsToFilter": [],
             "programsToFilter": [],
@@ -474,22 +479,30 @@
         "type": "aggregation",
         "requiredPrivilege": "app:reports",
         "config": {
-            "report":{
+            "report": {
                 "type": "observations",
                 "config": {
-                    "conceptNamesToFilter":["Diastolic Data", "Systolic Data"],
-                    "showVisitInfo" : true,
+                    "conceptNamesToFilter": [
+                        "Diastolic Data",
+                        "Systolic Data"
+                    ],
+                    "showVisitInfo": true,
                     "forDataAnalysis": true,
-                    "visitAttributes": ["Visit Status", "Admission Status"],
-                    "visitTypesToFilter": ["IPD"]
-
+                    "visitAttributes": [
+                        "Visit Status",
+                        "Admission Status"
+                    ],
+                    "visitTypesToFilter": [
+                        "IPD"
+                    ]
                 }
             },
             "rowGroups": [
                 "Gender"
             ],
             "columnGroups": [
-                "Concept Name", "value"
+                "Concept Name",
+                "value"
             ],
             "distinctGroups": [
                 "Patient Identifier"
@@ -501,7 +514,7 @@
         "type": "aggregation",
         "requiredPrivilege": "app:reports",
         "config": {
-            "report":{
+            "report": {
                 "type": "visits",
                 "config": {
                     "forDataAnalysis": true,
@@ -546,8 +559,7 @@
             "report": {
                 "type": "programs",
                 "config": {
-                    "patientAttributes": [
-                    ],
+                    "patientAttributes": [],
                     "patientAddresses": [
                         "city_village",
                         "address3"
@@ -570,9 +582,8 @@
             "distinctGroups": [
                 "Patient Identifier"
             ],
-            "showTotalRow":true,
-            "showTotalColumn":true
-
+            "showTotalRow": true,
+            "showTotalColumn": true
         }
     },
     "concatenatedReport": {
@@ -638,74 +649,311 @@
             ]
         }
     },
-  "GenericLabOrderReport": {
-    "name": "Lab Order Results",
-    "type": "labOrders",
-    "requiredPrivilege": "app:reports",	
-    "config": {
-      "patientAttributes": [
-        "caste",
-        "class",
-        "education",
-        "occupation",
-        "primaryContact"
-      ],
-      "patientAddresses": [
-        "address3",
-        "city_village"
-      ],
-      "visitAttributes": [
-        "Visit Status"
-      ],
-      "showVisitInfo": true,
-      "showProvider": true,
-      "programsToFilter": [],
-      "showReferredOutTests": true,
-      "conceptNamesToFilter": [
-        "Haemoglobin (Blood)"
-      ],
-      "conceptValuesToFilter": [
-        "10..100"
-      ],
-      "forDataAnalysis": true,
-      "excludeColumns": [
-        "address3"
-      ],
-      "showOrderDateTime": true
-    }
-  },
-
-  "OR Report":{
+    "GenericLabOrderReport": {
+        "name": "Lab Order Results",
+        "type": "labOrders",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "patientAttributes": [
+                "caste",
+                "class",
+                "education",
+                "occupation",
+                "primaryContact"
+            ],
+            "patientAddresses": [
+                "address3",
+                "city_village"
+            ],
+            "visitAttributes": [
+                "Visit Status"
+            ],
+            "showVisitInfo": true,
+            "showProvider": true,
+            "programsToFilter": [],
+            "showReferredOutTests": true,
+            "conceptNamesToFilter": [
+                "Haemoglobin (Blood)"
+            ],
+            "conceptValuesToFilter": [
+                "10..100"
+            ],
+            "forDataAnalysis": true,
+            "excludeColumns": [
+                "address3"
+            ],
+            "showOrderDateTime": true
+        }
+    },
+    "OR Report": {
         "name": "OR Report",
         "type": "MRSGeneric",
         "requiredPrivilege": "for_report_OR",
         "config": {
-          "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/new/OR.sql"
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/new/OR.sql"
         }
     },
-    
-  "GenericLabOrderReportAggregation": {
-    "name": "Test Name vs Gender",
-    "type": "aggregation",
-    "requiredPrivilege": "app:reports",
-    "config": {
-      "report": {
-        "type": "labOrders",
+    "GenericLabOrderReportAggregation": {
+        "name": "Test Name vs Gender",
+        "type": "aggregation",
+        "requiredPrivilege": "app:reports",
         "config": {
-          "forDataAnalysis": true,
-          "showVisitInfo": true
+            "report": {
+                "type": "labOrders",
+                "config": {
+                    "forDataAnalysis": true,
+                    "showVisitInfo": true
+                }
+            },
+            "rowGroups": [
+                "Test Name"
+            ],
+            "columnGroups": [
+                "Gender"
+            ],
+            "distinctGroups": [
+                "Patient Identifier"
+            ]
         }
-      },
-      "rowGroups": [
-        "Test Name"
-      ],
-      "columnGroups": [
-        "Gender"
-      ],
-      "distinctGroups": [
-        "Patient Identifier"
-      ]
+    },
+    "Number of major surgeries(both elective & Non-elective)": {
+        "name": "Number of major surgeries(both elective & Non-elective)",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Number of major surgeries(both elective & Non-elective).sql"
+        }
+    },
+    "Number of surgical patient charts in which the WHO Surgical Safety Checklist was completed per chart": {
+        "name": "Number of surgical patient charts in which the WHO Surgical Safety Checklist was completed per chart",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Number of surgical patient charts in which the WHO Surgical Safety Checklist was completed per chart.sql"
+        }
+    },
+    "Number of operated inpatient with new surgical site infection arising before discharge": {
+        "name": "Number of operated inpatient with new surgical site infection arising before discharge",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Number of operated inpatient with new surgical site infection arising before discharge.sql"
+        }
+    },
+    "Number of operated inpatients discharged alive (including transfers out)": {
+        "name": "Number of operated inpatients discharged alive (including transfers out)",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Number of operated inpatients discharged alive (including transfers out).sql"
+        }
+    },
+    "Number of operated inpatients discharged dead during the reporting period": {
+        "name": "Number of operated inpatients discharged dead during the reporting period",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Number of operated inpatients discharged dead during the reporting period.sql"
+        }
+    },
+    "Number of surgical cases with anesthetic adverse outcome (high spinal anesthesia, failed intubation, cardio-respiratory arrest) during reporting period": {
+        "name": "Number of surgical cases with anesthetic adverse outcome (high spinal anesthesia, failed intubation, cardio-respiratory arrest) during reporting period",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Number of surgical cases with anesthetic adverse outcome (high spinal anesthesia, failed intubation, cardio-respiratory arrest) during reporting period.sql"
+        }
+    },
+    "Total number of major surgical procedures performed in OR during reporting period": {
+        "name": "Total number of major surgical procedures performed in OR during reporting period",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Total number of major surgical procedures performed in OR during reporting period.sql"
+        }
+    },
+    "Sum total of elective surgical procedure cancelled": {
+        "name": "Sum total of elective surgical procedure cancelled",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Sum total of elective surgical procedure cancelled.sql"
+        }
+    },
+    "Sum total number of elective procedure scheduled": {
+        "name": "Sum total number of elective procedure scheduled",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Sum total number of elective procedure scheduled.sql"
+        }
+    },
+    "Sum total of Surgical procedures conducted": {
+        "name": "Sum total of Surgical procedures conducted",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Sum total of Surgical procedures conducted.sql"
+        }
+    },
+    "Total number of surgical related deaths": {
+        "name": "Total number of surgical related deaths",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Total number of surgical related deaths.sql"
+        }
+    },
+    "Total number of patients who received elective surgery": {
+        "name": "Total number of patients who received elective surgery",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Total number of patients who received elective surgery.sql"
+        }
+    },
+    "Number of patients who received elective surgery at recommended time": {
+        "name": "Number of patients who received elective surgery at recommended time",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Number of patients who received elective surgery at recommended time.sql"
+        }
+    },
+    "Number of inpatients who developed a new pressure ulcer": {
+        "name": "Number of inpatients who developed a new pressure ulcer",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Number of inpatients who developed a new pressure ulcer.sql"
+        }
+    },
+    "Number of patients discharged alive (including transfers out)": {
+        "name": "Number of patients discharged alive (including transfers out)",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Number of patients discharged alive (including transfers out).sql"
+        }
+    },
+    "Number of deaths among admitted inpatients": {
+        "name": "Number of deaths among admitted inpatients",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Number of deaths among admitted inpatients.sql"
+        }
+    },
+    "Sum total of outpatient waiting time (in minutes)": {
+        "name": "Sum total of outpatient waiting time (in minutes)",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Sum total of outpatient waiting time (in minutes).sql"
+        }
+    },
+    "Number of outpatients not seen on same day as registration in OPD": {
+        "name": "Number of outpatients not seen on same day as registration in OPD",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Number of outpatients not seen on same day as registration in OPD.sql"
+        }
+    },
+    "Total number of outpatients managed (new + Repeat) in regular working hour": {
+        "name": "Total number of outpatients managed (new + Repeat) in regular working hour",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Total number of outpatients managed (new + Repeat) in regular working hour.sql"
+        }
+    },
+    "Number of emergency patients readmitted to facility within 30 days previous discharge for the same case Diagnosis": {
+        "name": "Number of emergency patients readmitted to facility within 30 days previous discharge for the same case Diagnosis",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Number of emergency patients readmitted to facility within 30 days previous discharge for the same case Diagnosis.sql"
+        }
+    },
+    "Total number of patients who received radiology service (new + Repeat) in regular working hour": {
+        "name": "Total number of patients who received radiology service (new + Repeat) in regular working hour",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Total number of patients who received radiology service (new + Repeat) in regular working hour.sql"
+        }
+    },
+    "Total number of patients who received pathology service (new + Repeat) in regular working hour": {
+        "name": "Total number of patients who received pathology service (new + Repeat) in regular working hour",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Total number of patients who received pathology service (new + Repeat) in regular working hour.sql"
+        }
+    },
+    "Sum total of TAT for imaging and Radiology Service (in minute)": {
+        "name": "Sum total of TAT for imaging and Radiology Service (in minute)",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Sum total of TAT for imaging and Radiology Service (in minute).sql"
+        }
+    },
+    "Total number of Clients who get physiotherapy Service": {
+        "name": "Total number of Clients who get physiotherapy Service",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Service related/Total number of Clients who get physiotherapy Service.sql"
+        }
+    },
+    "Total number of patients with hypoxemia (SPO2 <90)": {
+        "name": "Total number of patients with hypoxemia (SPO2 <90)",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Misc/Total number of patients with hypoxemia (SPO2 <90).sql"
+        }
+    },
+    "Number of patients with hypoxemia who receive oxygen treatments as per the standard prescription": {
+        "name": "Number of patients with hypoxemia who receive oxygen treatments as per the standard prescription",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Misc/Number of patients with hypoxemia who receive oxygen treatments as per the standard prescription.sql"
+        }
+    },
+    "Number of Women who gave birth in the health facility or referred in who had any bleeding with hypotension or requiring blood transfusion and survived": {
+        "name": "Number of Women who gave birth in the health facility or referred in who had any bleeding with hypotension or requiring blood transfusion and survived",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/PPH/Number of Women who gave birth in the health facility or referred in who had any bleeding with hypotension or requiring blood transfusion and survived.sql"
+        }
+    },
+    "Total number of women who gave birth in the health facility or referred in or on arrival who had any bleeding with hypotension or requiring blood transfusion and died": {
+        "name": "Total number of women who gave birth in the health facility or referred in or on arrival who had any bleeding with hypotension or requiring blood transfusion and died",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/PPH/Total number of women who gave birth in the health facility or referred in or on arrival who had any bleeding with hypotension or requiring blood transfusion and died.sql"
+        }
+    },
+    "Total number of patient visited(new + repeat)in emergency service": {
+        "name": "Total number of patient visited(new + repeat)in emergency service",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/ER/Total number of patient visited(new + repeat)in emergency service.sql"
+        }
+    },
+    "Number of emergency patients referred to other health facility from emergency department": {
+        "name": "Number of emergency patients referred to other health facility from emergency department",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/ER/Number of emergency patients referred to other health facility from emergency department.sql"
+        }
     }
-  }
-  
 }
