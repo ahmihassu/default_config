@@ -30,24 +30,24 @@ Bahmni.Registration.AttributesConditions.rules = {
         }
         return returnValues;
     },
-     'Credit Information': function(patient) {
+     'CreditInformation': function(patient) {
         var returnValues = {
             show: [],
             hide: []
         };
-       if(patient["Credit Information"] && patient["Credit Information"].value && patient["Credit Information"].value == "Credit Companies"){
+       if(patient["CreditInformation"] && patient["CreditInformation"].value && patient["CreditInformation"].value == "Credit Companies"){
                         returnValues.show.push("creditCompanies");
                         returnValues.show.push("creditInformation");
                         returnValues.hide.push("insuranceInformation");
                         returnValues.hide.push("CBHIInformation")
         }
-        else if(patient["Credit Information"] && patient["Credit Information"].value && patient["Credit Information"].value == "Insurance"){
+        else if(patient["CreditInformation"] && patient["CreditInformation"].value && patient["CreditInformation"].value == "Insurance"){
             returnValues.show.push("creditInformation");
             returnValues.show.push("insuranceInformation");
             returnValues.hide.push("creditCompanies");
             returnValues.hide.push("CBHIInformation")
         }
-        else if(patient["Credit Information"] && patient["Credit Information"].value && patient["Credit Information"].value == "CBHI"){
+        else if(patient["CreditInformation"] && patient["CreditInformation"].value && patient["CreditInformation"].value == "CBHI"){
             returnValues.show.push("CBHIInformation");
             returnValues.hide.push("insuranceInformation");
             returnValues.hide.push("creditCompanies");
