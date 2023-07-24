@@ -74,10 +74,10 @@
                 ]
             },
             "creditInformation": {
-                "title": "Credit Information",
+                "title": "CreditInformation",
                 "translationKey": "Credit Details",
                 "attributes": [
-                    "Credit Information"
+                    "CreditInformation"
                 ]
             },
             "creditCompanies": {
@@ -144,7 +144,7 @@
         },
 
         "autoCompleteFields":["familyName", "caste", "middleName", "givenName"],
-        "mandatoryPersonAttributes": ["Free", "Credit Information", "InsuranceID", "InsuranceExpiryDate","CBHIExpiryDate", "CBHIID", "credit companies", "PaymentMethod"],
+        "mandatoryPersonAttributes": ["Free", "CreditInformation", "InsuranceID", "InsuranceExpiryDate","CBHIExpiryDate", "CBHIID", "credit companies", "PaymentMethod"],
         "defaultVisitType": "OPD",
         "TBIDOffset": 1000,
         "searchByIdForwardUrl": "/patient/{{patientUuid}}",
