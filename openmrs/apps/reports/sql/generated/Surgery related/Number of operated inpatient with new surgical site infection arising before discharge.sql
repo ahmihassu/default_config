@@ -9,4 +9,4 @@ LEFT JOIN obs form_under_obs0 ON encounter.encounter_id = form_under_obs0.encoun
                         AND form_under_obs0.concept_id IN (SELECT concept_id from concept_name WHERE concept_name_type = "FULLY_SPECIFIED" AND name LIKE  "Did the patient develop a new surgical site infection?")
 LEFT JOIN obs form_under_obs1 ON encounter.encounter_id = form_under_obs1.encounter_id
                         AND form_under_obs1.concept_id IN (SELECT concept_id from concept_name WHERE concept_name_type = "FULLY_SPECIFIED" AND name LIKE "Operative Notes")
-WHERE (form_under_obs1.obs_id IS NOT NULL AND location.retired=0 AND form_under_obs0.obs_id IS NOT NULL)
+WHERE (form_under_obs1.obs_id IS NOT NULL AND form_under_obs0.obs_id IS NOT NULL)
