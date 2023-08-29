@@ -49,6 +49,7 @@
   "OCCUPIED_VALUE_KEY": "Occupied",
   "AVAILABLE_VALUE_KEY": "Available",
   "MODULE_LABEL_TO_DISCHARGE_KEY": "To Discharge",
+  "MODULE_LABEL_TO_TRANSFER_KEY": "To Transfer",
   "MODULE_LABEL_ADMITTED_KEY": "Admitted",
   "MODULE_LABEL_TO_ADMIT_KEY": "To Admit",
 
