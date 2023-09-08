@@ -1,5 +1,6 @@
 SELECT 
-COUNT(DISTINCT person.person_id) AS "Number of emergency patients readmitted to facility within 30 days previous discharge for the same case Diagnosis"
+COUNT(DISTINCT CASE WHEN person.gender = 'M' THEN person.person_id END) AS "Male",
+COUNT(DISTINCT CASE WHEN person.gender = 'F' THEN person.person_id END) AS "Female"
 FROM person
 JOIN visit v ON person.person_id = v.patient_id AND date(v.date_started) between '#startDate#' and '#endDate#'
 JOIN visit v2 ON person.person_id = v2.patient_id AND v.visit_id != v2.visit_id AND TIMESTAMPDIFF(DAY, v2.date_stopped, v.date_started) between 0 and 30
