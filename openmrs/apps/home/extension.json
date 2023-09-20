@@ -149,6 +149,16 @@
     "icon": "fa-hospital-o",
     "order": 9,
     "requiredPrivilege": "app:ot"
+  },
+  "availability": {
+    "id": "bahmni.labAv",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "MODULE_LABEL_LAB_AVAIL",
+    "url": "../registration/index.html#/avail",
+    "icon": "fa-flask",
+    "order": 8,
+    "requiredPrivilege": "app:labAvail"
   }, 
   "implementerInterface": {
     "id": "bahmni.implementer.interface",
