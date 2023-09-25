@@ -54,6 +54,9 @@
                 }
             ]
         },
+        "duURL": "http:// 192.168.2.13/api/api/Patient/Dispensing-unit",
+        "stockURL": "http:// 192.168.2.13/api/api/Patient/ItemStock?institutionId",
+        "itemStockURL": "http:// 192.168.2.13/api/api/Patient/GetItemStock?institutionId",
         "diagnosisStatus": "Inactive",
         "program": {
             "patientInformation": {
