@@ -1,5 +1,5 @@
 SELECT 
-SUM(TIMESTAMPDIFF(MINUTE, form_under_obs0.date_created, form_under_obs2.date_created)) AS "Sum total of outpatient waiting time (in minutes)"
+AVG(TIMESTAMPDIFF(MINUTE, form_under_obs0.date_created, form_under_obs2.date_created)) AS "Sum total of outpatient waiting time (in minutes)"
 FROM person
 JOIN visit v ON person.person_id = v.patient_id AND date(v.date_started) between '#startDate#' and '#endDate#'
 JOIN obs form_under_obs0 ON person.person_id = form_under_obs0.person_id AND form_under_obs0.date_created between v.date_created and if(v.date_stopped, v.date_stopped, current_timestamp()) 

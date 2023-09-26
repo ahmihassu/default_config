@@ -43,6 +43,9 @@
             "MaleGreaterThan18":["Adult ER"],
             "MaleLessThan18":["Adult ER",  "Pediatrics ER"]
         },
+        "prTriageVisitTypes":{
+            "VisitTypes":["Pediatrics Emergency", "Pediatrics-OPD 1", "NICU"]
+        },
         "paymentConfig":{
             "disable billing": false,
             "payment window": 30
@@ -52,6 +55,11 @@
             "Adult ER": ["erconfig","erforms"],
             "Labour Ward": ["obconfig","obforms"],
             "Pediatrics ER": ["pdconfig", "pdforms"]
+        },
+        "prTriageFormLookup":{
+            "Pediatrics Emergency":["pdconfig", "pdforms"],
+            "Pediatrics-OPD 1": ["crconfig", "crforms"],
+            "NICU": ["pdconfig", "pdforms"]
         },
         "patientInformation": {
             "insuranceInformation": {
@@ -177,7 +185,8 @@
                 "Trige Date and time of Arrival": "now",
                 "Trige Date and Time of Triage": "now",
                 "tbrf, lb confirmed":false,
-                "bt, lb Confirmed and signed":false
+                "bt, lb Confirmed and signed":false,
+                "fnacrf, lb Confirmed and signed": false
             },
             "Trige Date and time of Arrival": {
                 "required": true
@@ -233,6 +242,9 @@
             },
             "tbrf, lb confirmed":{
                 "required":true
+            },
+            "fnacrf, lb Confirmed and signed" : {
+                "required" : true
             }
             
         },
