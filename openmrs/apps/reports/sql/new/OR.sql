@@ -44,6 +44,36 @@ UNION
 
     select
 
+        concat("Total number of Surgeries:") as "Category",
+
+        count(o.obs_id) as "Patient Count"
+
+    from concept_answer ca
+
+        join concept_name question on question.concept_id = ca.concept_id and question.concept_name_type = 'FULLY_SPECIFIED' AND question.name = 'ON Types of Surgery'
+
+        join concept_name answer on answer.concept_id = ca.answer_concept and answer.concept_name_type = 'SHORT'
+
+        LEFT JOIN obs o on o.concept_id = question.concept_id and o.value_coded = answer.concept_id and o.voided=0 and CAST(o.date_created AS DATE) BETWEEN '#startDate#' AND '#endDate#'
+
+UNION
+ 
+    select
+
+        CONCAT("Total number of patients sent to ", vt.name) as "Category",
+
+        COUNT(DISTINCT p.person_id) AS "Patient Count"
+
+    FROM person p
+
+    JOIN visit v ON v.patient_id = p.person_id AND CAST(v.date_started AS DATE) BETWEEN '#startDate#' AND '#endDate#'
+
+    JOIN visit_type vt ON vt.visit_type_id = v.visit_type_id AND vt.name LIKE "Minor OR" and vt.retired=0
+
+UNION
+
+    select
+
         concat(sa.status, " Surgeries") as "Category",
 
         count(sa2.surgical_appointment_id) as "Patient Count"
