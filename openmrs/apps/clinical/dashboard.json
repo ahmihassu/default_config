@@ -528,7 +528,7 @@
                 "displayOrder": 21,
                 "dashboardConfig": {
                     "title": null,
-                    "maximumNoOfVisits": 10
+                    "maximumNoOfVisits": 30
                 },
                 "formGroup": [ ],
                 "translationKey": "DASHBOARD_TITLE_FORMS_DISPLAY_CONTROL_KEY"
@@ -839,7 +839,7 @@
                 "displayOrder":12,
                 "dashboardConfig":{  
                     "title":null,
-                    "numberOfVisits":6,
+                    "numberOfVisits":20,
                     "showChart":false,
                     "showTable":true,
                     "showNormalLabResults": true,
