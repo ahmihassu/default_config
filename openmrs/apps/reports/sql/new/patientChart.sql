@@ -3,55 +3,55 @@ SELECT
     concat(pn.given_name, ' ', ifnull(pn.middle_name, ''), ' ', ifnull(pn.family_name, ''), ' (', pi.identifier, ')') as "MRN",
     TIMESTAMPDIFF(YEAR, p.birthdate, CURDATE()) as "Age",
     p.gender as "Sex",
-    CASE
+    MAX(CASE
         WHEN form_under_obs0.obs_id IS NOT NULL THEN 'Yes'
         ELSE ''
-    END as "History and Physical Examination",
-    CASE
+    END) as "History and Physical Examination",
+    MAX(CASE
         WHEN form_under_obs1.obs_id IS NOT NULL THEN 'Yes' 
         ELSE ''
-    END as "Vital sign",
-        CASE
+    END) as "Vital sign",
+    MAX(CASE
         WHEN form_under_obs2.obs_id IS NOT NULL THEN 'Yes'
         ELSE ''
-    END as "Order sheet",
-    CASE
+    END) as "Order sheet",
+    MAX(CASE
         WHEN form_under_obs3.obs_id IS NOT NULL THEN 'Yes' 
         ELSE ''
-    END as "PS Progress/Follow-up Sheet",
-        CASE
+    END) as "PS Progress/Follow-up Sheet",
+    MAX(CASE
         WHEN form_under_obs4.obs_id IS NOT NULL THEN 'Yes'
         ELSE ''
-    END as "Medication Administration Sheet",
-    CASE
+    END) as "Medication Administration Sheet",
+    MAX(CASE
         WHEN form_under_obs5.obs_id IS NOT NULL THEN 'Yes' 
         ELSE ''
-    END as "Psychiatry History",
-        CASE
+    END) as "Psychiatry History",
+    MAX(CASE
         WHEN form_under_obs6.obs_id IS NOT NULL THEN 'Yes'
         ELSE ''
-    END as "Psychiatry Follow-up form",
-    CASE
+    END) as "Psychiatry Follow-up form",
+    MAX(CASE
         WHEN form_under_obs7.obs_id IS NOT NULL THEN 'Yes' 
         ELSE ''
-    END as "Medication Reconciliation Form",
-        CASE
+    END) as "Medication Reconciliation Form",
+    MAX(CASE
         WHEN form_under_obs8.obs_id IS NOT NULL THEN 'Yes'
         ELSE ''
-    END as "In-patient Medication Profile Form",
-    CASE
+    END) as "In-patient Medication Profile Form",
+    MAX(CASE
         WHEN form_under_obs9.obs_id IS NOT NULL THEN 'Yes' 
         ELSE ''
-    END as "Nursing/ Midwife Comprehensive Client Assessment Format Section 5",
-    CASE
+    END) as "Nursing/ Midwife Comprehensive Client Assessment Format Section 5",
+    MAX(CASE
         WHEN form_under_obs10.obs_id IS NOT NULL THEN 'Yes' 
         ELSE ''
-    END as "Discharge Summary"  
+    END) as "Discharge Summary"  
 FROM person p
-JOIN encounter en on p.person_id = en.patient_id AND encounter_type != 3 AND date(en.encounter_datetime) between '#startDate#' and '#endDate#'
-JOIN visit v on en.visit_id = v.visit_id
-JOIN visit_attribute va ON va.visit_id = v.visit_id AND va.value_reference = 'IPD'
-join bed_patient_assignment_map bpam on bpam.patient_id = v.patient_id
+JOIN encounter en on p.person_id = en.patient_id AND v.visit_id = en.visit_id and encounter_type = 1 AND date(en.date_created) between '#startDate#' and '#endDate#'
+JOIN visit v on p.person_id = v.patient_id
+JOIN visit_attribute va ON v.visit_id = va.visit_id AND va.value_reference = "IPD"
+join bed_patient_assignment_map bpam on bpam.patient_id = v.patient_id and bpam.date_stopped IS NULL
 join bed_location_map blm on bpam.bed_id = blm.bed_id
 join location bedLoc on blm.location_id = bedLoc.location_id
 join location bedParentLoc on bedLoc.parent_location = bedParentLoc.location_id
@@ -89,3 +89,9 @@ AND form_under_obs9.concept_id IN (SELECT concept_id from concept_name WHERE con
 
 LEFT JOIN obs form_under_obs10 ON en.encounter_id = form_under_obs10.encounter_id
 AND form_under_obs10.concept_id IN (SELECT concept_id from concept_name WHERE concept_name_type = "FULLY_SPECIFIED" AND name LIKE "Discharge Summary")
+WHERE en.encounter_type IN (1)
+AND (form_under_obs10.obs_id IS NOT NULL or form_under_obs9.obs_id IS NOT NULL or form_under_obs8.obs_id IS NOT NULL 
+or form_under_obs7.obs_id IS NOT NULL or form_under_obs6.obs_id IS NOT NULL or form_under_obs5.obs_id IS NOT NULL
+or form_under_obs4.obs_id IS NOT NULL or form_under_obs3.obs_id IS NOT NULL or form_under_obs2.obs_id IS NOT NULL 
+or form_under_obs1.obs_id IS NOT NULL or form_under_obs0.obs_id IS NOT NULL)
+GROUP BY bedParentLoc.name, "MRN"
