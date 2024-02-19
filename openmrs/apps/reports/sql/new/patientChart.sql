@@ -48,7 +48,7 @@ SELECT
         ELSE ''
     END) as "Discharge Summary"  
 FROM person p
-JOIN encounter en on p.person_id = en.patient_id AND v.visit_id = en.visit_id and encounter_type = 1 AND date(en.date_created) between '#startDate#' and '#endDate#'
+JOIN encounter en on p.person_id = en.patient_id and encounter_type = 1 AND date(en.date_created) between '#startDate#' and '#endDate#'
 JOIN visit v on p.person_id = v.patient_id
 JOIN visit_attribute va ON v.visit_id = va.visit_id AND va.value_reference = "IPD"
 join bed_patient_assignment_map bpam on bpam.patient_id = v.patient_id and bpam.date_stopped IS NULL
