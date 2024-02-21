@@ -116,9 +116,9 @@
     "type": "link",
     "translationKey": "MODULE_LABEL_SERVICE_AUDIT_KEY",
     "url": "../registration/index.html#/serviceAudit",
-    "icon": "icon-bahmni-reports",
+    "icon": "fa-list-alt",
     "order": 8,
-    "requiredPrivilege": "app:reports"
+    "requiredPrivilege": "app:serviceAudit"
   },
   "medicoLegal": {
       "id": "bahmni.medicolegal",
