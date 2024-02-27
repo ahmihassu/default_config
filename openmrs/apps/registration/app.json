@@ -186,7 +186,8 @@
                 "Trige Date and Time of Triage": "now",
                 "tbrf, lb confirmed":false,
                 "bt, lb Confirmed and signed":false,
-                "fnacrf, lb Confirmed and signed": false
+                "fnacrf, lb Confirmed and signed": false,
+                "pmorphrf, lb Confirmed and signed": false
             },
             "Trige Date and time of Arrival": {
                 "required": true
@@ -245,6 +246,9 @@
             },
             "fnacrf, lb Confirmed and signed" : {
                 "required" : true
+            },
+            "pmorphrf, lb Confirmed and signed": {
+                "required": true
             }
             
         },

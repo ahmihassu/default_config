@@ -211,6 +211,20 @@
         "order": 1,
         "requiredPrivilege": "app:lab"
     },
+    "fourthlabValues":{
+        "id": "bahmni.registration.conceptSetGroup.fourthlabValues",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "labconfig",
+        "extensionParams": {
+            "conceptName": "Peripheral Morphology Results",
+            "conceptNames": ["Peripheral morphology Result form", "Peripheral morphology result text", "pmorphrf, lb Confirmed and signed"],
+            "translationKey": "Peripheral Morphology Results",
+            "required":true,
+            "showLatest": true
+        },
+        "order": 1,
+        "requiredPrivilege": "app:lab"
+    },
     "labValue":{
         "id": "bahmni.registration.conceptSetGroup.crTriageValue",
         "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
@@ -231,6 +245,12 @@
             "FNAC Results":{
                 "formName": "FNAC Results",
                 "conceptNames": ["FNAC Results"],
+                "required":true,
+                "showLatest": true
+            },
+            "Peripheral Morphology Results":{
+                "formName": "Peripheral Morphology Results",
+                "conceptNames": ["Peripheral Morphology Results"],
                 "required":true,
                 "showLatest": true
             }
