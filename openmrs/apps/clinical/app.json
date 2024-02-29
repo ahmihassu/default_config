@@ -834,7 +834,8 @@
                 "Malaria, Death Date": "2015-12-01",
                 "bt, dr Confirmed and signed": false,
                 "tbrf, dr confirmed": false,
-                "fnacrf, dr confirmed": false
+                "fnacrf, dr confirmed": false,
+                "pmorphrf, dr Confirmed and signed": false
             },
             "bt, dr Confirmed and signed": {
                 "required":true
@@ -853,6 +854,9 @@
             },
             "Blood group & RH N": {
                 "required":true
+            },
+            "pmorphrf, dr Confirmed and signed": {
+                "required": true
             }
         },
         "visitPage": {
