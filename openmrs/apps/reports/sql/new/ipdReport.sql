@@ -12,9 +12,11 @@ SELECT
       GROUP_CONCAT(DISTINCT (diagnoses.diagnosis_name) SEPARATOR '|')            AS "Diagnosis",
       visit_attribute.date_changed                                               AS "Date of Discharge",
       (select value_numeric from obs where concept_id =  
-      (select concept_id from concept_name where name = 'height' and concept_name_type = 'fully_specified')and person_id = p.person_id) as 'Height',
+      (select concept_id from concept_name where name = 'height' and concept_name_type = 'fully_specified') and person_id = p.person_id
+      ORDER BY obs.obs_datetime DESC LIMIT 1) as 'Height',
       (select value_numeric from obs where concept_id =  
-      (select concept_id from concept_name where name = 'weight' and concept_name_type = 'fully_specified')and person_id = p.person_id) as 'Weight'
+      (select concept_id from concept_name where name = 'weight' and concept_name_type = 'fully_specified')and person_id = p.person_id
+      ORDER BY obs.obs_datetime DESC LIMIT 1) as 'Weight'
     FROM visit_attribute
     INNER JOIN visit_attribute_type vat
       ON vat.visit_attribute_type_id = visit_attribute.attribute_type_id
