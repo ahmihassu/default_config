@@ -197,6 +197,34 @@
         "order": 1,
         "requiredPrivilege": "app:lab"
     },
+    "thirdlabValues":{
+        "id": "bahmni.registration.conceptSetGroup.thirdlabValues",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "labconfig",
+        "extensionParams": {
+            "conceptName": "FNAC Results",
+            "conceptNames": ["FNAC Report", "Code", "Site of lesion", "Clinical Diagnosis", "Referring physician", "Gross", "Asp/ Scrape", "FNAC, Microscopy", "HEIF Conclusion", "Index", "Comment", "fnacrf, lb Confirmed and signed"],
+            "translationKey": "FNAC Results",
+            "required":true,
+            "showLatest": true
+        },
+        "order": 1,
+        "requiredPrivilege": "app:lab"
+    },
+    "fourthlabValues":{
+        "id": "bahmni.registration.conceptSetGroup.fourthlabValues",
+        "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
+        "type": "labconfig",
+        "extensionParams": {
+            "conceptName": "Peripheral Morphology Results",
+            "conceptNames": ["Peripheral morphology Result form", "Peripheral morphology result text", "pmorphrf, lb Confirmed and signed"],
+            "translationKey": "Peripheral Morphology Results",
+            "required":true,
+            "showLatest": true
+        },
+        "order": 1,
+        "requiredPrivilege": "app:lab"
+    },
     "labValue":{
         "id": "bahmni.registration.conceptSetGroup.crTriageValue",
         "extensionPointId": "org.bahmni.registration.conceptSetGroup.observations",
@@ -211,6 +239,18 @@
             "TB Result Form":{
                 "formName": "TB Result Form",
                 "conceptNames": ["TB Result Form"],
+                "required":true,
+                "showLatest": true
+            },
+            "FNAC Results":{
+                "formName": "FNAC Results",
+                "conceptNames": ["FNAC Results"],
+                "required":true,
+                "showLatest": true
+            },
+            "Peripheral Morphology Results":{
+                "formName": "Peripheral Morphology Results",
+                "conceptNames": ["Peripheral Morphology Results"],
                 "required":true,
                 "showLatest": true
             }

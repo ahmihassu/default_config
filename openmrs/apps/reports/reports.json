@@ -4,26 +4,9 @@
         "type": "visits",
         "requiredPrivilege": "app:reports",
         "config": {
-            "forDataAnalysis": true,
-            "patientAttributes": [
-                "caste",
-                "class",
-                "education",
-                "occupation",
-                "primaryContact"
-            ],
             "visitAttributes": [
                 "Visit Status",
                 "Admission Status"
-            ],
-            "patientAddresses": [
-                "address3",
-                "city_village"
-            ],
-            "applyDateRangeFor": "visitStopDate",
-            "visitTypesToFilter": [
-                "PHARMACY VISIT",
-                "OPD"
             ]
         }
     },
@@ -395,23 +378,6 @@
             ]
         }
     },
-    "visitReport": {
-        "name": "Visit Report",
-        "type": "visitReport",
-        "requiredPrivilege": "app:reports",
-        "config": {
-            "personAttributes": [
-                "caste",
-                "class",
-                "education",
-                "occupation",
-                "primaryContact"
-            ],
-            "visitAttributes": [
-                "Visit Status"
-            ]
-        }
-    },
     "patientReport": {
         "name": "Patient Information",
         "type": "PatientReport",
@@ -743,6 +709,14 @@
         "requiredPrivilege": "app:reports",
         "config": {
             "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/generated/Surgery related/Number of major surgeries.sql"
+        }
+    },
+    "Patient chart audit": {
+        "name": "Patient chart audit",
+        "type": "MRSGeneric",
+        "requiredPrivilege": "app:reports",
+        "config": {
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/new/patientChart.sql"
         }
     },
     "Number of surgical patient charts in which the WHO Surgical Safety Checklist was completed per chart": {

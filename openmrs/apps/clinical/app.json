@@ -111,7 +111,59 @@
                 "codedConceptName": "Chief Complaint",
                 "nonCodedConceptName": "Non-Coded Chief Complaint",
                 "durationRequired": false,
-                "allowAddMore": true
+                "allowAddMore": true,
+                "required": true
+            },
+            "History Notes": {
+                "required": true
+            },
+            "Chronic OPD Details, Medical / Surgical History": {
+                "required": true
+            },
+            "ER General Notes, Allergies": {
+                "required": true
+            },
+            "Is She Eligible For Cervical Cancer Screening ?": {
+                "required": true
+            },
+            "Was HIV test done?": {
+                "required": true
+            },
+            "ACIF SAE PE General Appearance": {
+                "required": true
+            },
+            "ACIF SAE PE HEENT": {
+                "required": true
+            },
+            "Lymphoglandular Systems (LGS)": {
+                "required": true
+            },
+            "Respiratory System (RS)": {
+                "required": true
+            },
+            "Cardiovascular System (CVS)": {
+                "required": true
+            },
+            "The Abdomen and Pelvis": {
+                "required": true
+            },
+            "Genitourinary System (GUS)": {
+                "required": true
+            },
+            "Musculoskeletal System (MSS)": {
+                "required": true
+            },
+            "Integumentary System (IS)": {
+                "required": true
+            },
+            "Nervous System (NS)": {
+                "required": true
+            },
+            "Assessment": {
+                "required": true
+            },
+            "Plan": {
+                "required": true
             },
             "Tuberculosis, Adverse Effects": {
                 "multiSelect": true,
@@ -781,13 +833,18 @@
                 "Safe Abortion, Remarks": "Remarks",
                 "Malaria, Death Date": "2015-12-01",
                 "bt, dr Confirmed and signed": false,
-                "tbrf, dr confirmed": false
+                "tbrf, dr confirmed": false,
+                "fnacrf, dr confirmed": false,
+                "pmorphrf, dr Confirmed and signed": false
             },
             "bt, dr Confirmed and signed": {
                 "required":true
             },
             "tbrf, dr confirmed":{
                 "required":true
+            },
+            "fnacrf, dr confirmed": {
+                "required" : true
             },
             "tbrf, Requested Test": {
                 "required":true
@@ -797,6 +854,9 @@
             },
             "Blood group & RH N": {
                 "required":true
+            },
+            "pmorphrf, dr Confirmed and signed": {
+                "required": true
             }
         },
         "visitPage": {
