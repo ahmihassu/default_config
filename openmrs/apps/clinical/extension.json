@@ -104,6 +104,20 @@
     "order": 2,
     "requiredPrivilege": "app:clinical"
   },
+  "bahmniClinicalPatientsSearchNoMainDiag": {
+    "id": "bahmni.clinical.patients.search.NoMainDiag",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.noMainDiag",
+      "translationKey": "Patients with no main diagnosis",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard/diagnosis",
+      "view":"tabular"
+    },
+    "label": "Active",
+    "order": 4,
+    "requiredPrivilege": "app:emergency"
+  },
   "bahmniClinicalPatientsASearchActivePatientsByLab": {
     "id": "bahmni.clinical.patients.search.lab",
     "extensionPointId": "org.bahmni.patient.search",
