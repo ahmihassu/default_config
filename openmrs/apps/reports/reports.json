@@ -215,18 +215,11 @@
         }
     },
     "diabetes": {
-        "name": "Diabetes",
-        "type": "obsCount",
+        "name": "Diabetes Screening",
+        "type": "MRSGeneric",
         "requiredPrivilege": "app:reports",
         "config": {
-            "ageGroupName": "All Ages",
-            "conceptNames": [
-                "Diabetes Intake"
-            ],
-            "visitTypes": [
-                "OPD",
-                "IPD"
-            ]
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/new/diabetes.sql"
         }
     },
     "codedValueRangeBasedReport": {

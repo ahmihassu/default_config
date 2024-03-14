@@ -1,5 +1,5 @@
 SELECT 
-SUM(TIMESTAMPDIFF(MINUTE, orders.date_created, obs.date_created)) AS "Sum total of TAT for imaging and Radiology Service (in minute)"
+SUM(DISTINCT TIMESTAMPDIFF(MINUTE, orders.date_created, obs.date_created)) AS "Sum total of TAT for imaging and Radiology Service (in minute)"
 FROM person
 JOIN encounter on person.person_id = encounter.patient_id AND date(encounter.encounter_datetime) between '#startDate#' and '#endDate#' 
 JOIN orders ON orders.encounter_id = encounter.encounter_id
