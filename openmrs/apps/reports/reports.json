@@ -139,14 +139,12 @@
             ]
         }
     },
-    "outpatientMorbidity": {
+    "OutPatientMorb": {
         "name": "Outpatient Morbidity",
-        "type": "diagnosisCount",
-        "requiredPrivilege": "app:reports",
+        "type": "MRSGeneric",
+        "requiredPrivilege":"app:reports",
         "config": {
-            "visitTypes": [
-                "OPD"
-            ]
+            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/new/outPatientMorbidity.sql"
         }
     },
     "laboratoryServices": {
