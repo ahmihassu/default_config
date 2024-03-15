@@ -13,7 +13,7 @@
     "testReport": {
         "name": "Test Observation Report",
         "type": "observations",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "patientAttributes": [
                 "caste",
@@ -54,7 +54,7 @@
     "testFormReport": {
         "name": "Test Forms Report",
         "type": "forms",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "patientAttributes": [
                 "caste",
@@ -86,7 +86,7 @@
     "formBuilderReport": {
         "name": "Form builder form Report",
         "type": "formBuilder",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "patientAttributes": [
                 "caste",
@@ -116,7 +116,7 @@
     "chiefComplaintReport": {
         "name": "Chief Complaint Report",
         "type": "obsCount",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "ageGroupName": "All Ages",
             "conceptNames": [
@@ -139,14 +139,12 @@
             ]
         }
     },
-    "outpatientMorbidity": {
+    "OutPatientMorb": {
         "name": "Outpatient Morbidity",
-        "type": "diagnosisCount",
-        "requiredPrivilege": "app:reports",
+        "type": "MRSGeneric",
+        "requiredPrivilege":"app:reports",
         "config": {
-            "visitTypes": [
-                "OPD"
-            ]
+            "sqlPath":"/var/www/bahmni_config/openmrs/apps/reports/sql/new/outPatientMorbidity.sql"
         }
     },
     "laboratoryServices": {
@@ -209,30 +207,23 @@
     "tuberculosisIntakeTemplateReport": {
         "name": "Tuberculosis Intake Template Report",
         "type": "obsTemplate",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "templateName": "Tuberculosis Intake Template"
         }
     },
     "diabetes": {
-        "name": "Diabetes",
-        "type": "obsCount",
+        "name": "Diabetes Screening",
+        "type": "MRSGeneric",
         "requiredPrivilege": "app:reports",
         "config": {
-            "ageGroupName": "All Ages",
-            "conceptNames": [
-                "Diabetes Intake"
-            ],
-            "visitTypes": [
-                "OPD",
-                "IPD"
-            ]
+            "sqlPath": "/var/www/bahmni_config/openmrs/apps/reports/sql/new/diabetes.sql"
         }
     },
     "codedValueRangeBasedReport": {
         "name": "Coded Value Range Based Report",
         "type": "obsCount",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "ageGroupName": "All Ages",
             "conceptNames": [
@@ -249,7 +240,7 @@
     "haemoglobinRangeBasedReport": {
         "name": "Haemoglobin Range Based Report",
         "type": "NumericConceptValuesCount",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "rangeGroupName": "Haemoglobin",
             "ageGroupName": "Haemoglobin",
@@ -272,7 +263,7 @@
     "obsValuesCountsForAlbuminMCHOperationDateAndPosture(bloodPressure)": {
         "name": "Obs Values Counts for Albumin, MCH, Operation Date and Posture(blood pressure)",
         "type": "ObsValueCount",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "conceptNames": [
                 "Albumin",
@@ -345,7 +336,7 @@
     "patientsProgramStateCountReport": {
         "name": "Patients Program State Count Report",
         "type": "programStateCount",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "programName": "Malaria Program"
         }
@@ -520,7 +511,7 @@
     "pivotReportForPrograms": {
         "name": "HIV Program Pivot Report",
         "type": "aggregation",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "report": {
                 "type": "programs",
@@ -555,7 +546,7 @@
     "concatenatedReport": {
         "name": "ConcatenatedReport",
         "type": "concatenated",
-        "requiredPrivilege": "app:reports",
+        "requiredPrivilege": "9app:reports",
         "config": {
             "reports": [
                 {

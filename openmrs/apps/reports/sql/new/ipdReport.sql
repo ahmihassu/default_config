@@ -1,6 +1,5 @@
 SELECT
       loc.name                                                                   AS "Location",
-      visit_attribute.date_created                                               AS "Date of Admission",
       vt.name                                                                    AS "Visit Type",
       pi.identifier                                                              AS "Patient ID",
       CONCAT(pn.given_name, " ", ifnull(pn.family_name,""))                      AS "Patient Name",
@@ -10,11 +9,18 @@ SELECT
       pa.address1,
       pa.city_village,
       GROUP_CONCAT(DISTINCT (diagnoses.diagnosis_name) SEPARATOR '|')            AS "Diagnosis",
+      visit_attribute.date_created                                               AS "Date of Admission",
       visit_attribute.date_changed                                               AS "Date of Discharge",
+
       (select value_numeric from obs where concept_id =  
-      (select concept_id from concept_name where name = 'height' and concept_name_type = 'fully_specified')and person_id = p.person_id) as 'Height',
+      (select concept_id from concept_name where name = 'height' and concept_name_type = 'fully_specified') and person_id = p.person_id
+      ORDER BY obs.obs_datetime DESC LIMIT 1) as 'Height',
       (select value_numeric from obs where concept_id =  
-      (select concept_id from concept_name where name = 'weight' and concept_name_type = 'fully_specified')and person_id = p.person_id) as 'Weight'
+      (select concept_id from concept_name where name = 'weight' and concept_name_type = 'fully_specified')and person_id = p.person_id
+      ORDER BY obs.obs_datetime DESC LIMIT 1) as 'Weight',
+      (select name from concept_name where concept_id = (select value_coded from obs where concept_id =
+        (select concept_id from concept_name where name = "condition on discharge" and concept_name_type = 'fully_specified')and person_id = p.person_id
+      )) as "Discharge Condition"
     FROM visit_attribute
     INNER JOIN visit_attribute_type vat
       ON vat.visit_attribute_type_id = visit_attribute.attribute_type_id
