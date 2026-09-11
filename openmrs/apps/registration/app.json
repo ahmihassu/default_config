@@ -65,6 +65,7 @@
             "insuranceInformation": {
                 "title": "Insurance Information",
                 "translationKey": "Insurance Details",
+                "order": 5,
                 "attributes": [
                     "InsuranceID",
                     "InsuranceName",
@@ -76,21 +77,25 @@
             "CBHIInformation": {
                 "title": "CBHIInformation",
                 "translationKey": "CBHIInformation",
+                "order": 6,
                 "attributes": [
                     "CBHIExpiryDate",
-                    "CBHIID"
+                    "CBHI ID"
                 ]
             },
+
             "creditInformation": {
-                "title": "CreditInformation",
+                "title": "Credit Information",
                 "translationKey": "Credit Details",
+                "order": 3,
                 "attributes": [
-                    "CreditInformation"
+                    "Credit Information"
                 ]
             },
             "creditCompanies": {
                 "title": "Credit Companies",
                 "translationKey": "Credit Companies",
+                "order": 4,
                 "attributes": [
                     "Credit Companies"
                 ]
@@ -98,12 +103,14 @@
             "freeInformation": {
                 "title": "Free",
                 "translationKey": "Free",
+                "order": 2,
                 "attributes": [
                     "Free"
                 ]
             },
             "additionalPatientInformation": {
                 "title": "Additional Patient Information",
+                "order": 1,
                 "attributes": [
                     "Name",
                     "Phone",
@@ -129,18 +136,18 @@
                     "secondaryIdentifier",
                     "education",
                     "caste",
-                    "Insurance",
-                    "Credit Company"
+                    "CBHI Region",
+                    "CBHI Zone",
+                    "CBHI Woreda"
                 ]
             },
             "defaults":  {
                 "class": "General",
                 "landHolding": 2,
-                "PaymentMethod" : "Cash",
-                "Originofreferral": "Self"
+                "PaymentMethod" : "Cash"
             }
         },
-        
+
         "addressHierarchy": {
             "showAddressFieldsTopDown": true,
             "strictAutocompleteFromLevel": "cityVillage"
@@ -152,7 +159,7 @@
         },
 
         "autoCompleteFields":["familyName", "caste", "middleName", "givenName"],
-        "mandatoryPersonAttributes": ["Free", "CreditInformation", "InsuranceID", "InsuranceExpiryDate","CBHIExpiryDate", "CBHIID", "credit companies", "PaymentMethod"],
+        "mandatoryPersonAttributes": ["Free", "Credit Information", "InsuranceID", "InsuranceExpiryDate", "CBHIExpiryDate", "CBHI ID", "Credit Companies", "PaymentMethod"],
         "defaultVisitType": "OPD",
         "TBIDOffset": 1000,
         "searchByIdForwardUrl": "/patient/{{patientUuid}}",
