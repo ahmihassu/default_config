@@ -662,8 +662,9 @@
         "translationKey":"DASHBOARD_TAB_PATIENT_SUMMARY_KEY",
         "maxRecentlyViewedPatients":10,
         "printing": {
-            "title": "Butajira General Hospital",
+            "title": "WACHEMO UNIVERSITY NIGIST ELENI MOHAMED MEMORIAL COMPREHENSIVE SPECIALIZED HOSPITAL",
             "header": "Patient Summary Report",
+            "logo": "../images/bahmniLogo.png",
             "showNameAndImage": true
         },
         "sections":{  
@@ -911,9 +912,9 @@
         "translationKey":"DASHBOARD_TAB_ALL_OBSERVATIONS_KEY",
         "maxRecentlyViewedPatients":10,
         "printing": {
-            "title": "TBGH Hospital",
+            "title": "WACHEMO UNIVERSITY NIGIST ELENI MOHAMED MEMORIAL COMPREHENSIVE SPECIALIZED HOSPITAL",
             "header": "All Observations",
-            "logo": "../images/bahmniLogo.jpg",
+            "logo": "../images/bahmniLogo.png",
             "showNameAndImage": true
         },
         "sections":{           
