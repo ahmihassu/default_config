@@ -47,7 +47,7 @@
             "VisitTypes":["Pediatrics Emergency", "Pediatrics-OPD 1", "NICU"]
         },
         "paymentConfig":{
-            "disable billing": false,
+            "enforceRegistrationFee": true,
             "payment window": 30
         },
         "erTriageFormLookup":{
