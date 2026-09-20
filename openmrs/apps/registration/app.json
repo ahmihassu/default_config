@@ -47,7 +47,7 @@
             "VisitTypes":["Pediatrics Emergency", "Pediatrics-OPD 1", "NICU"]
         },
         "paymentConfig":{
-            "disable billing": false,
+            "enforceRegistrationFee": true,
             "payment window": 30
         },
         "erTriageFormLookup":{
@@ -67,11 +67,8 @@
                 "translationKey": "Insurance Details",
                 "order": 5,
                 "attributes": [
-                    "InsuranceID",
-                    "InsuranceName",
-                    "InsuranceCode",
-                    "InsuranceZone",
-                    "InsuranceExpiryDate"
+                    "Police Officer Name",
+                    "Police Officer Phone"
                 ]
             },
             "CBHIInformation": {
@@ -81,6 +78,14 @@
                 "attributes": [
                     "CBHIExpiryDate",
                     "CBHI ID"
+                ]
+            },
+            "SHIInformation": {
+                "title": "SHIInformation",
+                "translationKey": "SHIInformation",
+                "order": 7,
+                "attributes": [
+                    "SHI ID"
                 ]
             },
 
@@ -138,7 +143,20 @@
                     "caste",
                     "CBHI Region",
                     "CBHI Zone",
-                    "CBHI Woreda"
+                    "CBHI Woreda",
+                    "CBHI Kebele",
+                    "SHI Region",
+                    "SHI Zone",
+                    "SHI Woreda",
+                    "SHI Kebele",
+                    "Insurance Region",
+                    "Insurance Zone",
+                    "Insurance Woreda",
+                    "InsuranceID",
+                    "InsuranceName",
+                    "InsuranceCode",
+                    "InsuranceZone",
+                    "InsuranceExpiryDate"
                 ]
             },
             "defaults":  {
@@ -159,7 +177,7 @@
         },
 
         "autoCompleteFields":["familyName", "caste", "middleName", "givenName"],
-        "mandatoryPersonAttributes": ["Free", "Credit Information", "InsuranceID", "InsuranceExpiryDate", "CBHIExpiryDate", "CBHI ID", "Credit Companies", "PaymentMethod"],
+        "mandatoryPersonAttributes": ["Free", "Credit Information", "Police Officer Name", "Police Officer Phone", "CBHIExpiryDate", "CBHI ID", "SHI ID", "Credit Companies", "PaymentMethod"],
         "defaultVisitType": "OPD",
         "TBIDOffset": 1000,
         "searchByIdForwardUrl": "/patient/{{patientUuid}}",

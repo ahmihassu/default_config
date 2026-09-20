@@ -24,7 +24,8 @@
     ],
     "config": {
         "paymentConfig": {
-            "disable checking": true
+            "enforceRegistrationFee": true,
+            "payment window": 30
         },
         "hideConditions": false,
         "enableRadiologyOrderOptions": [

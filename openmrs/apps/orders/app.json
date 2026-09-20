@@ -8,7 +8,8 @@
         ],
     "config" : {
       "paymentConfig": {
-        "disable checking": true
+        "enforceRegistrationFee": true,
+        "payment window": 30
       },
       "maxConceptSetLevels": 3,
       "conceptSetUI": {
