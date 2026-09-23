@@ -9,6 +9,7 @@
     "config" : {
       "paymentConfig": {
         "enforceRegistrationFee": true,
+        "enforceIpdDeposit": true,
         "payment window": 30
       },
       "maxConceptSetLevels": 3,

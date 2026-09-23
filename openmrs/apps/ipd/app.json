@@ -21,6 +21,9 @@
         "onTransferForwardTo": "#",
         "onDischargeForwardTo": "#",
         "defaultVisitType": "IPD",
+        "paymentConfig": {
+            "enforceIpdDeposit": true
+        },
         "expectedDateOfDischarge": "IPD Intended Discharge",
         "conceptSetUI": {
             "Expected Date of Discharge": {
