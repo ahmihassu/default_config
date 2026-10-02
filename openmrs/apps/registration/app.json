@@ -205,7 +205,7 @@
         },
 
         "autoCompleteFields":["familyName", "caste", "middleName", "givenName"],
-        "mandatoryPersonAttributes": ["Free", "Credit Information", "Police Officer Name", "Police Officer Phone", "CBHIExpiryDate", "CBHI ID", "SHI ID", "Credit Companies", "PaymentMethod"],
+        "mandatoryPersonAttributes": ["Phone Number", "Free", "Credit Information", "Police Officer Name", "Police Officer Phone", "CBHIExpiryDate", "CBHI ID", "SHI ID", "Credit Companies", "PaymentMethod"],
         "defaultVisitType": "OPD",
         "TBIDOffset": 1000,
         "searchByIdForwardUrl": "/patient/{{patientUuid}}",
