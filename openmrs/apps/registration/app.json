@@ -66,26 +66,46 @@
                 "title": "Insurance Information",
                 "translationKey": "Insurance Details",
                 "order": 5,
+                "clearOnHide": true,
                 "attributes": [
                     "Police Officer Name",
                     "Police Officer Phone"
+                ],
+                "additionalAttributes": [
+                    "Insurance Region",
+                    "Insurance Zone",
+                    "Insurance Woreda"
                 ]
             },
             "CBHIInformation": {
                 "title": "CBHIInformation",
                 "translationKey": "CBHIInformation",
                 "order": 6,
+                "clearOnHide": true,
                 "attributes": [
                     "CBHIExpiryDate",
                     "CBHI ID"
+                ],
+                "additionalAttributes": [
+                    "CBHI Region",
+                    "CBHI Zone",
+                    "CBHI Woreda",
+                    "CBHI Kebele"
                 ]
             },
             "SHIInformation": {
                 "title": "SHIInformation",
                 "translationKey": "SHIInformation",
                 "order": 7,
+                "clearOnHide": true,
                 "attributes": [
                     "SHI ID"
+                ],
+                "additionalAttributes": [
+                    "SHI Region",
+                    "SHI Zone",
+                    "SHI Woreda",
+                    "SHI Kebele"
                 ]
             },
 
@@ -93,6 +113,7 @@
                 "title": "Credit Information",
                 "translationKey": "Credit Details",
                 "order": 3,
+                "clearOnHide": true,
                 "attributes": [
                     "Credit Information"
                 ]
@@ -101,6 +122,7 @@
                 "title": "Credit Companies",
                 "translationKey": "Credit Companies",
                 "order": 4,
+                "clearOnHide": true,
                 "attributes": [
                     "Credit Companies"
                 ]
@@ -109,6 +131,7 @@
                 "title": "Free",
                 "translationKey": "Free",
                 "order": 2,
+                "clearOnHide": true,
                 "attributes": [
                     "Free"
                 ]
@@ -169,6 +192,11 @@
         "addressHierarchy": {
             "showAddressFieldsTopDown": true,
             "strictAutocompleteFromLevel": "cityVillage"
+        },
+        "mandatoryAddressFields": ["stateProvince", "countyDistrict", "cityVillage"],
+        "readOnlyFields": ["CBHIExpiryDate"],
+        "fieldUpdatePrivileges": {
+            "CBHIExpiryDate": "Edit CBHI Expiry Date"
         },
 
         "relationshipTypeMap": {
