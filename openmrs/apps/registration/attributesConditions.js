@@ -36,6 +36,15 @@ Bahmni.Registration.AttributesConditions.rules = {
             show: [],
             hide: []
         };
+        var paymentMethod = patient["PaymentMethod"] && patient["PaymentMethod"].value;
+        if (paymentMethod != "Credit") {
+            // Credit sub-sections are meaningless for other payment methods, even if stale values are still on the patient.
+            returnValues.hide.push("insuranceInformation");
+            returnValues.hide.push("creditCompanies");
+            returnValues.hide.push("CBHIInformation");
+            returnValues.hide.push("SHIInformation");
+            return returnValues;
+        }
         if (patient["Credit Information"] && patient["Credit Information"].value && patient["Credit Information"].value == "Credit Companies") {
             returnValues.show.push("creditCompanies");
             returnValues.show.push("creditInformation");
